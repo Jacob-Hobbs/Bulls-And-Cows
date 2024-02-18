@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BullsCowsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-18T23:18:02" hostname="DESKTOP-540C16A" time="0.079">
+  <properties/>
+  <testcase name="start" classname="BullsCowsTest" time="0.079"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+The secret code is prepared: ****.
+
+Turn 1. Answer:
+1234
+Grade: 1 cow.
+
+Turn 2. Answer:
+5678
+Grade: 1 cow.
+
+Turn 3. Answer:
+9305
+Grade: 4 bulls.
+Congrats! The secret code is 9305.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
