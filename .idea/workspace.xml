@@ -16,12 +16,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/Game time/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/Game time/task-info.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulls and Cows/Secret code/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/Secret code/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bulls and Cows/Improve the code generator/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/Improve the code generator/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bulls and Cows/New level/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/New level/task-info.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/lesson-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/lesson-info.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/classes/java/main/bullscows/GameInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/classes/java/main/bullscows/GameInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/classes/java/main/bullscows/Grader.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/classes/java/main/bullscows/Grader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/classes/java/test/BullsCowsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/classes/java/test/BullsCowsTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/reports/tests/test/classes/BullsCowsTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/reports/tests/test/classes/BullsCowsTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/reports/tests/test/index.html" afterDir="false" />
@@ -33,10 +34,10 @@
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/out/production/classes/bullscows/GameInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/out/production/classes/bullscows/GameInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/out/production/classes/bullscows/Grader.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/out/production/classes/bullscows/Grader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/src/bullscows/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/src/bullscows/GameInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/src/bullscows/Grader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/src/bullscows/Grader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/test/BullsCowsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/test/BullsCowsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course-remote-info.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +48,18 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,27 +77,27 @@
     <setting file="file://$PROJECT_DIR$/Bulls and Cows/task/src/bullscows/Main.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Bulls and Cows/task/test/BullsCowsTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2cYn6CddAf8jkwdfcTX0NuY41tn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Edu.Yaml.Migrate": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Edu.Yaml.Migrate&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Bulls and Cows" />
@@ -106,6 +119,8 @@
       <option value="jdbc:h2:file:C:/Users/Jacob/Desktop/Bulls and Cows/Bulls and Cows/Game log/db/db" />
       <option value="jdbc:h2:file:C:/Users/Jacob/Desktop/Bulls and Cows/Bulls and Cows/Game time/db/db" />
       <option value="jdbc:h2:file:C:/Users/Jacob/Desktop/Bulls and Cows/Bulls and Cows/Grader/db/db" />
+      <option value="jdbc:h2:file:C:/Users/Jacob/Desktop/Bulls and Cows/Bulls and Cows/Improve the code generator/db/db" />
+      <option value="jdbc:h2:file:C:/Users/Jacob/Desktop/Bulls and Cows/Bulls and Cows/New level/db/db" />
       <option value="jdbc:h2:file:C:/Users/Jacob/Desktop/Bulls and Cows/Bulls and Cows/Secret code/db/db" />
     </taskDatabasesInitialized>
   </component>
@@ -116,7 +131,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708297201688</updated>
-      <workItem from="1708297203178" duration="10770000" />
+      <workItem from="1708297203178" duration="12245000" />
+      <workItem from="1708376389427" duration="2649000" />
     </task>
     <servers />
   </component>

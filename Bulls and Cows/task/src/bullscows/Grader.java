@@ -9,13 +9,13 @@ public class Grader {
 
     }
 
-    public void grade(int[] secretNum, int[] userNum) {
+    public void grade(String[] secretNum, String[] userNum) {
         for (int i = 0; i <= userNum.length - 1; i++) {
-            if (userNum[i] == secretNum[i]) {
+            if (userNum[i].equals(secretNum[i])) {
                 bulls++;
             } else {
                 for (int j = 0; j <= userNum.length - 1; j++) {
-                    if (userNum[i] == secretNum[j]) {
+                    if (userNum[i].equals(secretNum[j])) {
                         cows++;
                         break;
                     }
