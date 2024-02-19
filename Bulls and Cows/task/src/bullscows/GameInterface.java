@@ -7,46 +7,49 @@ import java.util.Scanner;
 
 public class GameInterface {
 
-    private final int[] secretNum = {0, 0, 0, 0};
-    private final int[] userNum = {0, 0, 0, 0};
+    private  int[] secretNum = {};
+    private int[] userNum = {};
+    private int turn = 1;
 
     public GameInterface() {
 
     }
 
+    // Method that manages main game interface thread
     public void start() {
-
+        int length;
         Scanner scanner = new Scanner(System.in);
-        Integer num = Integer.valueOf(scanner.nextLine());
+
+        while (true) {
+            System.out.println("Please, enter the secret code's length:");
+            length = Integer.valueOf(scanner.nextLine());
+            if (length > 10) {
+                System.out.println("Error! Invalid secret code length");
+            } else {
+                break;
+            }
+        }
+
+        randomNumberGenerator(length);
+        System.out.println("Okay, let's start a game!");
+
+        while (true) {
+            System.out.println("Turn " + turn + ":");
+            String guess = scanner.nextLine();
+            placeUserNumInArray(guess, length);
+            Grader grader = new Grader();
+            grader.grade(secretNum, userNum);
+            if (grader.getBulls() == length) {
+                System.out.println(grader.getGrade());
+                break;
+            } else {
+                System.out.println(grader.getGrade());
+                turn++;
+            }
+        }
+
+        System.out.println("Congratulations! You guessed the secret code.");
         scanner.close();
-        System.out.println(randomNumberGenerator(num));
-
-        // This portion of the exercise doesn't use this, but we will need it later
-        /*numberGenerator();
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        placeUserNumInArray(input);
-        Grader grader = new Grader();
-        grader.grade(secretNum, userNum);
-        System.out.println(grader.getGrade() + " The secret code is " + secretNum[0] +
-                secretNum[1] + secretNum[2] + secretNum[3]); */
-
-        // This portion of the exercise doesn't use this, but we will need it later
-        /* System.out.println("The secret code is prepared: ****.");
-        System.out.println();
-        System.out.println("Turn 1. Answer:");
-        System.out.println("1234");
-        System.out.println("Grade: 1 cow.");
-        System.out.println();
-        System.out.println("Turn 2. Answer:");
-        System.out.println("5678");
-        System.out.println("Grade: 1 cow.");
-        System.out.println();
-        System.out.println("Turn 3. Answer:");
-        System.out.println("9305");
-        System.out.println("Grade: 4 bulls.");
-        System.out.println("Congrats! The secret code is 9305."); */
-
     }
 
     // Method generates a random 4-digit number and passes it into secretNum array
@@ -58,35 +61,36 @@ public class GameInterface {
     }
 
     // Method places user specified 4-digit number into an array
-    private void placeUserNumInArray(String input) {
-        for (int i = 0; i <= 3; i++) {
+    private void placeUserNumInArray(String input, int length) {
+        userNum = new int[length];
+
+        for (int i = 0; i <= length - 1; i++) {
             userNum[i] = input.charAt(i) - '0';
         }
     }
 
     // Method for task 3 to generate a variable-digit code composed of unique integers
-    private String randomNumberGenerator(int digits) {
+    private void randomNumberGenerator(int digits) {
+        // initializes new secretNum array for custom game size
+        secretNum = new int[digits];
+        // arraylist where custom secret code is stored after creation temporarily
+        ArrayList<Integer> intArrayList = new ArrayList<>();
+        Random randomInt = new Random();
 
-        if (digits >= 10) {
-            return "Error: can't generate a secret number with a length of " +
-                    digits + " because there aren't enough unique digits.";
-        } else {
-            ArrayList<Integer> intArrayList = new ArrayList<>();
-            Random randomInt = new Random();
-            for (int i = 0; i <= digits - 1; i++) {
-                while (true) {
-                    int nextInt = randomInt.nextInt(10);
-                    if (!intArrayList.contains(nextInt)) {
-                        intArrayList.add(nextInt);
-                        break;
-                    }
+        // adds a unique number to intArrayList for secret code generation
+        for (int i = 0; i <= digits - 1; i++) {
+            while (true) {
+                int nextInt = randomInt.nextInt(10);
+                if (!intArrayList.contains(nextInt)) {
+                    intArrayList.add(nextInt);
+                    break;
                 }
             }
-            StringBuilder code = new StringBuilder();
-            for (int i = 0; i <= digits - 1; i++) {
-                code.append(intArrayList.get(i));
-            }
-            return "The random secret number is " + code + ".";
+        }
+
+        // adds secret code stored in intArrayList into secretNum array
+        for (int i = 0; i <= digits - 1; i++) {
+            secretNum[i] = intArrayList.get(i);
         }
     }
 }

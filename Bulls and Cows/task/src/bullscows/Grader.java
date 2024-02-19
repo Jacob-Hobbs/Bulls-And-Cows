@@ -10,11 +10,11 @@ public class Grader {
     }
 
     public void grade(int[] secretNum, int[] userNum) {
-        for (int i = 0; i <= 3; i++) {
+        for (int i = 0; i <= userNum.length - 1; i++) {
             if (userNum[i] == secretNum[i]) {
                 bulls++;
             } else {
-                for (int j = 0; j <= 3; j++) {
+                for (int j = 0; j <= userNum.length - 1; j++) {
                     if (userNum[i] == secretNum[j]) {
                         cows++;
                         break;
