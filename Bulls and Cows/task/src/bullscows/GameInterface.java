@@ -2,6 +2,7 @@ package bullscows;
 
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -17,6 +18,13 @@ public class GameInterface {
 
     // Method that manages main game interface thread
     public void start() {
+
+        // FIXME: Refactor to match example more closely.
+        // TODO: 1. If number of symbols is <= 10 then all ints
+        // TODO: 2. If number of symbols is > 10 then ints and chars
+
+
+
         int length;
         Scanner scanner = new Scanner(System.in);
 
@@ -46,6 +54,10 @@ public class GameInterface {
         }
 
         randomCodeGenerator(length, numOfSymbols);
+
+        System.out.println("Code: " + Arrays.toString(secretNum));
+
+        // FIXME: incorrect statement of available characters
         System.out.println("The secret is prepared: " + printStars(length) +
                 " (0-9, a-z)");
         System.out.println("Okay, let's start a game!");
@@ -85,78 +97,54 @@ public class GameInterface {
     private void randomCodeGenerator(int digits, int numOfChars) {
         // initializes new secretNum array for custom game size
         secretNum = new String[digits];
-
-        // TODO: fix this method
-        // TODO: 1. Generate int that represents number of ints
-        // TODO: 2. Generate int that represents number of chars
-        // TODO: 3. Use these numbers to add random ints and chars to list
-        // TODO: 4. Randomly select digits number of symbols from list.
-        // TODO: 5. Add these to array to create secret code.
         Random random = new Random();
-        // This is the number of integers that can appear in code
-        int numOfIntegers = random.nextInt(digits + 1);
-        // This is the number of characters that can appear in code
-        int numOfCharacters = digits - numOfIntegers;
+        ArrayList<String> randomSymbolsList = new ArrayList<>();
 
-        // TODO: Continue to step 3
-
-
-
-
-
-
-        ArrayList<String> randomCharList = new ArrayList<>();
-
-        while (randomCharList.size() < numOfChars) {
-            Random random = new Random();
-            char character = (char)(random.nextInt(26) + 'a');
-            if (!randomCharList.contains(String.valueOf(character))) {
-                randomCharList.add(String.valueOf(character));
-            }
-        }
-
-
-        // arraylist where custom secret code is stored after creation temporarily
-        //ArrayList<Integer> intArrayList = new ArrayList<>();
-        Random randomInt = new Random();
-
-        // adds a unique number to intArrayList for secret code generation
-        for (int i = 0; i <= numOfIntegers - 1; i++) {
-            while (true) {
-                int nextInt = randomInt.nextInt(10);
-                if (!randomCharList.contains(String.valueOf(nextInt))) {
-                    randomCharList.add(String.valueOf(nextInt));
-                    break;
+        // Prepare randomCharacterList with integers
+        if (digits <= 10) {
+            while (randomSymbolsList.size() < digits) {
+                int randomInt = random.nextInt(10);
+                if (!randomSymbolsList.contains(String.valueOf(randomInt))) {
+                    randomSymbolsList.add(String.valueOf(randomInt));
                 }
             }
+        // Prepare randomCharacterList with integers and characters
+        } else {
+            ArrayList<String> usableCharList = new ArrayList<>();
+            // add all possible chars to above list
+            for (int i = 0; i < digits - 11; i++) {
+                char nextChar = (char) ('a' + i);
+                usableCharList.add(String.valueOf(nextChar));
+            }
+            while (randomSymbolsList.size() < digits) {
+                int randomInt = random.nextInt(10);
+                if (!randomSymbolsList.contains(String.valueOf(randomInt))) {
+                    randomSymbolsList.add(String.valueOf(randomInt));
+                }
+            }
+            randomSymbolsList.addAll(usableCharList);
         }
 
-        // TODO Actually make secret code. Currently all chars and ints are stored in randomCharList
-        // TODO 1. Generate random number corresponding to element in list.
-        // TODO 2. If element at random number has not been used, place on secretNum array.
-        ArrayList<String> secretCodeList = new ArrayList<>();
-        for (int i = 0; i <= digits - 1; i++) {
-            while (true) {
-                int nextInt = randomInt.nextInt(digits);
-                if (!secretCodeList.contains(randomCharList.get(nextInt))) {
-                    secretCodeList.add(randomCharList.get(nextInt));
-                    break;
-                }
+        // TODO: Create secret code from ints and characters on randomCharacterList
+        ArrayList<String> randomCharacterList = new ArrayList<>();
+        while (randomCharacterList.size() <= digits) {
+            int randomElement = random.nextInt(digits);
+            if (!randomCharacterList.contains(randomSymbolsList.get(randomElement))) {
+                randomCharacterList.add(randomSymbolsList.get(randomElement));
             }
         }
 
-
-        // adds secret code stored in intArrayList into secretNum array
+        // TODO: Add elements in randomCharacterList to secretNum[]
         for (int i = 0; i <= digits - 1; i++) {
-            secretNum[i] = secretCodeList.get(i);
+            secretNum[i] = randomCharacterList.get(i);
         }
     }
 
     private String printStars(int length) {
-        String output = "";
+        StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i <= length - 1; i++) {
-            output.concat("*");
+            stringBuilder.append("*");
         }
-        return output;
+        return stringBuilder.toString();
     }
 }

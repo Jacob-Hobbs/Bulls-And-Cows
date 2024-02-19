@@ -459,5 +459,54 @@ files:
       }
     learner_created: true
 feedback_link: https://hyperskill.org/projects/53/stages/292/implement#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: |-
+    Wrong answer in test #1
+
+    The game has no answer or more than one.
+
+    Please find below the output of your program during this failed test.
+    Note that the &#39;&gt;&#39; character indicates the beginning of the input line.
+
+    ---
+
+    Input the length of the secret code:
+    &gt; 1
+    Input the number of possible symbols in the code:
+    &gt; 10
+    The secret is prepared: * (0-9, a-z)
+    Okay, let&#39;s start a game!
+    Turn 1:
+    &gt; 0
+    Grade: None.
+    Turn 2:
+    &gt; 1
+    Grade: None.
+    Turn 3:
+    &gt; 2
+    Grade: None.
+    Turn 4:
+    &gt; 3
+    Grade: None.
+    Turn 5:
+    &gt; 4
+    Grade: None.
+    Turn 6:
+    &gt; 5
+    Grade: None.
+    Turn 7:
+    &gt; 6
+    Grade: None.
+    Turn 8:
+    &gt; 7
+    Grade: None.
+    Turn 9:
+    &gt; 8
+    Grade: None.
+    Turn 10:
+    &gt; 9
+    Grade: None.
+    Turn 11:
+  time: "Mon, 19 Feb 2024 22:14:19 UTC"
 record: -1
