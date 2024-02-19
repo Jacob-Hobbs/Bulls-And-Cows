@@ -114,6 +114,120 @@ files:
           }
       }
     learner_created: false
+  - name: src/bullscows/Grader.java
+    visible: true
+    text: |
+      package bullscows;
+      
+      public class Grader {
+      
+          private int bulls = 0;
+          private int cows = 0;
+      
+          public Grader() {
+      
+          }
+      
+          public void grade(int[] secretNum, int[] userNum) {
+              for (int i = 0; i <= 3; i++) {
+                  if (userNum[i] == secretNum[i]) {
+                      bulls++;
+                  } else {
+                      for (int j = 0; j <= 3; j++) {
+                          if (userNum[i] == secretNum[j]) {
+                              cows++;
+                              break;
+                          }
+                      }
+                  }
+              }
+          }
+      
+          public int getBulls() {
+              return this.bulls;
+          }
+      
+          public int getCows() {
+              return this.cows;
+          }
+      
+          public String getGrade() {
+              if (bulls == 0 && cows == 0) {
+                  return "Grade: None.";
+              } else if (bulls > 0 && cows > 0) {
+                  return "Grade: " + bulls + " bull(s) + and " + cows + " cow(s).";
+              } else if (bulls > 0) {
+                  return "Grade: " + bulls + " bull(s).";
+              } else {
+                  return "Grade: " + cows + " cow(s).";
+              }
+          }
+      }
+    learner_created: true
+  - name: src/bullscows/GameInterface.java
+    visible: true
+    text: |
+      package bullscows;
+      
+      import java.util.Random;
+      import java.util.Scanner;
+      
+      public class GameInterface {
+      
+          private final int[] secretNum = {0, 0, 0, 0};
+          private final int[] userNum = {0, 0, 0, 0};
+      
+          public GameInterface() {
+      
+          }
+      
+          protected void start() {
+              numberGenerator();
+              Scanner scanner = new Scanner(System.in);
+              String input = scanner.nextLine();
+              placeUserNumInArray(input);
+              Grader grader = new Grader();
+              grader.grade(secretNum, userNum);
+              System.out.println(grader.getGrade() + " The secret code is " + secretNum[0] +
+                      secretNum[1] + secretNum[2] + secretNum[3]);
+      
+              // This portion of the exercise doesn't use this, but we will need it later
+              /* System.out.println("The secret code is prepared: ****.");
+              System.out.println();
+              System.out.println("Turn 1. Answer:");
+              System.out.println("1234");
+              System.out.println("Grade: 1 cow.");
+              System.out.println();
+              System.out.println("Turn 2. Answer:");
+              System.out.println("5678");
+              System.out.println("Grade: 1 cow.");
+              System.out.println();
+              System.out.println("Turn 3. Answer:");
+              System.out.println("9305");
+              System.out.println("Grade: 4 bulls.");
+              System.out.println("Congrats! The secret code is 9305."); */
+      
+          }
+      
+          // Method generates a random 4-digit number and passes it into secretNum array
+          private void numberGenerator() {
+              Random randomInt = new Random();
+              for (int i = 0; i <= 3; i++) {
+                  secretNum[i] = randomInt.nextInt(10);
+              }
+          }
+      
+          // Method places user specified 4-digit number into an array
+          private void placeUserNumInArray(String input) {
+              for (int i = 0; i <= 3; i++) {
+                  userNum[i] = input.charAt(i) - '0';
+              }
+          }
+      }
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/53/stages/289/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 19 Feb 2024 19:50:01 UTC"
 record: -1

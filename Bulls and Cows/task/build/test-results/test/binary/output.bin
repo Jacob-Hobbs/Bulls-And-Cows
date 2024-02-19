@@ -1,12 +1,20 @@
 [1;31m
 Start test 1[0m
-> 3601
-*Grade: 1 cow(s). The secret code is 5933
+> 4
+#The random secret number is 7413.
 [1;31m
 Start test 2[0m
-> 5933
-&Grade: None. The secret code is 0810
+> 1
+ The random secret number is 6.
 [1;31m
 Start test 3[0m
-> 2345
-&Grade: None. The secret code is 1989
+> 11
+fError: can't generate a secret number with a length of 11 because there aren't enough unique digits.
+[1;31m
+Start test 4[0m
+> 6
+%The random secret number is 857391.
+[1;31m
+Start test 5[0m
+> 3
+"The random secret number is 850.

@@ -1,5 +1,7 @@
 package bullscows;
 
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -12,15 +14,22 @@ public class GameInterface {
 
     }
 
-    protected void start() {
-        numberGenerator();
+    public void start() {
+
+        Scanner scanner = new Scanner(System.in);
+        Integer num = Integer.valueOf(scanner.nextLine());
+        scanner.close();
+        System.out.println(randomNumberGenerator(num));
+
+        // This portion of the exercise doesn't use this, but we will need it later
+        /*numberGenerator();
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         placeUserNumInArray(input);
         Grader grader = new Grader();
         grader.grade(secretNum, userNum);
         System.out.println(grader.getGrade() + " The secret code is " + secretNum[0] +
-                secretNum[1] + secretNum[2] + secretNum[3]);
+                secretNum[1] + secretNum[2] + secretNum[3]); */
 
         // This portion of the exercise doesn't use this, but we will need it later
         /* System.out.println("The secret code is prepared: ****.");
@@ -52,6 +61,32 @@ public class GameInterface {
     private void placeUserNumInArray(String input) {
         for (int i = 0; i <= 3; i++) {
             userNum[i] = input.charAt(i) - '0';
+        }
+    }
+
+    // Method for task 3 to generate a variable-digit code composed of unique integers
+    private String randomNumberGenerator(int digits) {
+
+        if (digits >= 10) {
+            return "Error: can't generate a secret number with a length of " +
+                    digits + " because there aren't enough unique digits.";
+        } else {
+            ArrayList<Integer> intArrayList = new ArrayList<>();
+            Random randomInt = new Random();
+            for (int i = 0; i <= digits - 1; i++) {
+                while (true) {
+                    int nextInt = randomInt.nextInt(10);
+                    if (!intArrayList.contains(nextInt)) {
+                        intArrayList.add(nextInt);
+                        break;
+                    }
+                }
+            }
+            StringBuilder code = new StringBuilder();
+            for (int i = 0; i <= digits - 1; i++) {
+                code.append(intArrayList.get(i));
+            }
+            return "The random secret number is " + code + ".";
         }
     }
 }
