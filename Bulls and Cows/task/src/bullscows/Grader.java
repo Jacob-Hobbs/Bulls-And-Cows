@@ -9,7 +9,6 @@ public class Grader {
 
     }
 
-    // FIXME: If the user enters a 2 and the code is 0220, the one 2 can only count for 1 cow!
     public void grade(int[] secretNum, int[] userNum) {
         for (int i = 0; i <= 3; i++) {
             if (userNum[i] == secretNum[i]) {
@@ -18,6 +17,7 @@ public class Grader {
                 for (int j = 0; j <= 3; j++) {
                     if (userNum[i] == secretNum[j]) {
                         cows++;
+                        break;
                     }
                 }
             }

@@ -1,8 +1,12 @@
 [1;31m
 Start test 1[0m
 > 3601
-+Grade: 1 bull(s). The secret code is 6662
+*Grade: 1 cow(s). The secret code is 5933
 [1;31m
 Start test 2[0m
-> 6662
-*Grade: 2 cow(s). The secret code is 3221
+> 5933
+&Grade: None. The secret code is 0810
+[1;31m
+Start test 3[0m
+> 2345
+&Grade: None. The secret code is 1989
