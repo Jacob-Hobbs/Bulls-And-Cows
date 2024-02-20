@@ -1,9 +1,6 @@
 package bullscows;
 
-import java.sql.Array;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -22,55 +19,60 @@ public class GameInterface {
     public void start() {
         int length;
         Scanner scanner = new Scanner(System.in);
-
         while (true) {
             System.out.println("Input the length of the secret code:");
-            length = Integer.valueOf(scanner.nextLine());
-            if (length > 36) {
+            try {
+                length = Integer.valueOf(scanner.nextLine());
+            } catch (Exception e) {
                 System.out.println("Error! Invalid secret code length");
-            } else {
                 break;
             }
-        }
-
-        int numOfSymbols;
-        while (true) {
-            System.out.println("Input the number of possible symbols in the code:");
-            numOfSymbols = Integer.valueOf(scanner.nextLine());
-            if (numOfSymbols > 36) {
-                System.out.println("Error! You can't have more symbols that the max length" +
-                        " (36) of the secret code!");
-            } else if (numOfSymbols < length) {
-                System.out.println("Error! You can't have less symbols than the length ("
-                        + length + ") of the secret code!");
-            } else {
-                break;
-            }
-        }
-
-        randomCodeGenerator(length, numOfSymbols);
-        System.out.println("The secret is prepared: " + printStars(length) +
-                " " + printGuessRange(numOfSymbols));
-        System.out.println("Okay, let's start a game!");
-
-        while (true) {
-            System.out.println("Turn " + turn + ":");
-            String guess = scanner.nextLine();
-            placeUserNumInArray(guess, length);
-            Grader grader = new Grader();
-            grader.grade(secretNum, userNum);
-            if (grader.getBulls() == length) {
-                System.out.println(grader.getGrade());
+            if (length > 36 || length <= 0) {
+                System.out.println("Error! Invalid secret code length");
                 break;
             } else {
-                System.out.println(grader.getGrade());
-                turn++;
-                grader.setBulls(0);
-                grader.setCows(0);
+                int numOfSymbols;
+                System.out.println("Input the number of possible symbols in the code:");
+                numOfSymbols = Integer.valueOf(scanner.nextLine());
+                if (numOfSymbols > 36) {
+                    System.out.println("Error! You can't have more symbols that the max length" +
+                            " (36) of the secret code!");
+                    break;
+                } else if (numOfSymbols < length) {
+                    System.out.println("Error! You can't have less symbols than the length ("
+                            + length + ") of the secret code!");
+                    break;
+                } else {
+                    randomCodeGenerator(length, numOfSymbols);
+                    System.out.println("The secret is prepared: " + printStars(length) +
+                            " " + printGuessRange(numOfSymbols));
+                    System.out.println("Okay, let's start a game!");
+                    while (true) {
+                        System.out.println("Turn " + turn + ":");
+                        String guess = scanner.nextLine();
+                        if (checkGuess(guess, length)) {
+                            placeUserNumInArray(guess, length);
+                            Grader grader = new Grader();
+                            grader.grade(secretNum, userNum);
+                            if (grader.getBulls() == length) {
+                                System.out.println(grader.getGrade());
+                                System.out.println("Congratulations! You guessed the secret code.");
+                                break;
+                            } else {
+                                System.out.println(grader.getGrade());
+                                turn++;
+                                grader.setBulls(0);
+                                grader.setCows(0);
+                            }
+                        } else {
+                            System.out.println("Error: Invalid guess!");
+                            break;
+                        }
+                    }
+                    break;
+                }
             }
         }
-
-        System.out.println("Congratulations! You guessed the secret code.");
         scanner.close();
     }
 
@@ -149,5 +151,26 @@ public class GameInterface {
             char mChar = (char)('a' + (maxChar - 1));
             return "(0-9, a-" + mChar + ").";
         }
+    }
+
+    // Method to check guess to ensure it is acceptable
+    private boolean checkGuess(String guess, int digits) {
+        if (guess.length() != digits) {
+            return false;
+        }
+        ArrayList<String> usableSymbolsList = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            usableSymbolsList.add(String.valueOf(i));
+        }
+        for (int i = 0; i < 26; i++) {
+            char mChar = (char)('a' + i);
+            usableSymbolsList.add(String.valueOf(mChar));
+        }
+        for (int i = 0; i < guess.length() - 1; i++) {
+            if (!usableSymbolsList.contains(String.valueOf(guess.charAt(i)))) {
+                return false;
+            }
+        }
+        return true;
     }
 }

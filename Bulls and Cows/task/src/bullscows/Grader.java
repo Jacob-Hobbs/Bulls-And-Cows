@@ -1,7 +1,6 @@
 package bullscows;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Grader {
 
