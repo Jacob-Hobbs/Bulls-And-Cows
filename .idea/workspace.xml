@@ -13,11 +13,18 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bulls and Cows/Error/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/Error/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bulls and Cows/Game log/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/Game log/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bulls and Cows/Game time/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/Game time/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bulls and Cows/Grader/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/Grader/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bulls and Cows/Improve the code generator/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/Improve the code generator/task-info.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/New level/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/New level/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bulls and Cows/Secret code/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/Secret code/task-info.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/classes/java/main/bullscows/GameInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/classes/java/main/bullscows/GameInterface.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/classes/java/main/bullscows/Grader.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/classes/java/main/bullscows/Grader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/classes/java/test/BullsCowsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/classes/java/test/BullsCowsTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/reports/tests/test/classes/BullsCowsTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/reports/tests/test/classes/BullsCowsTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/reports/tests/test/packages/default-package.html" afterDir="false" />
@@ -26,9 +33,10 @@
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/out/production/classes/bullscows/GameInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/out/production/classes/bullscows/GameInterface.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/src/bullscows/GameInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/src/bullscows/GameInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bulls and Cows/task/src/bullscows/Grader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bulls and Cows/task/src/bullscows/Grader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course-remote-info.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708297201688</updated>
       <workItem from="1708297203178" duration="12245000" />
-      <workItem from="1708376389427" duration="6808000" />
+      <workItem from="1708376389427" duration="13694000" />
     </task>
     <servers />
   </component>

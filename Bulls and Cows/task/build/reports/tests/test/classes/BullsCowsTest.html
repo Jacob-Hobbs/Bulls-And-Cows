@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.091s</div>
+<div class="counter">2.119s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,117 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="start"></a>
-<h3 class="failures">start</h3>
-<span class="code">
-<pre>java.lang.AssertionError: Wrong answer in test #1
-
-The game has no answer or more than one.
-
-Please find below the output of your program during this failed test.
-Note that the '&gt;' character indicates the beginning of the input line.
-
----
-
-Input the length of the secret code:
-&gt; 1
-Input the number of possible symbols in the code:
-&gt; 10
-The secret is prepared: * (0-9, a-z)
-Okay, let's start a game!
-Turn 1:
-&gt; 0
-Grade: None.
-Turn 2:
-&gt; 1
-Grade: None.
-Turn 3:
-&gt; 2
-Grade: None.
-Turn 4:
-&gt; 3
-Grade: None.
-Turn 5:
-&gt; 4
-Grade: None.
-Turn 6:
-&gt; 5
-Grade: None.
-Turn 7:
-&gt; 6
-Grade: None.
-Turn 8:
-&gt; 7
-Grade: None.
-Turn 9:
-&gt; 8
-Grade: None.
-Turn 10:
-&gt; 9
-Grade: None.
-Turn 11:
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -182,13 +78,13 @@ Turn 11:
 </tr>
 </thead>
 <tr>
-<td class="failures">start</td>
-<td class="failures">0.091s</td>
-<td class="failures">failed</td>
+<td class="success">start</td>
+<td class="success">2.119s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>?[1;31m
@@ -197,39 +93,11029 @@ Input the length of the secret code:
 &gt; 1
 Input the number of possible symbols in the code:
 &gt; 10
-The secret is prepared: * (0-9, a-z)
+The secret is prepared: * (0-9).
 Okay, let's start a game!
 Turn 1:
 &gt; 0
+[3]
+[0]
+0
+EXECUTED
 Grade: None.
 Turn 2:
 &gt; 1
+[3]
+[1]
+1
+EXECUTED
 Grade: None.
 Turn 3:
 &gt; 2
+[3]
+[2]
+2
+EXECUTED
 Grade: None.
 Turn 4:
 &gt; 3
-Grade: None.
-Turn 5:
+[3]
+[3]
+3
+EXECUTED
+Grade: 1 bull(s).
+Congratulations! You guessed the secret code.
+?[1;31m
+Start test 2?[0m
+Input the length of the secret code:
 &gt; 4
+Input the number of possible symbols in the code:
+&gt; 10
+The secret is prepared: **** (0-9).
+Okay, let's start a game!
+Turn 1:
+&gt; 0000
+[9, 3, 7, 8]
+[0, 0, 0, 0]
+0
+EXECUTED
+0
+EXECUTED
+0
+EXECUTED
+0
+EXECUTED
+Grade: None.
+Turn 2:
+&gt; 1111
+[9, 3, 7, 8]
+[1, 1, 1, 1]
+1
+EXECUTED
+1
+EXECUTED
+1
+EXECUTED
+1
+EXECUTED
+Grade: None.
+Turn 3:
+&gt; 2222
+[9, 3, 7, 8]
+[2, 2, 2, 2]
+2
+EXECUTED
+2
+EXECUTED
+2
+EXECUTED
+2
+EXECUTED
+Grade: None.
+Turn 4:
+&gt; 3333
+[9, 3, 7, 8]
+[3, 3, 3, 3]
+3
+EXECUTED
+3
+EXECUTED
+3
+3
+Grade: 1 bull(s) + and 1 cow(s).
+Turn 5:
+&gt; 4444
+[9, 3, 7, 8]
+[4, 4, 4, 4]
+4
+EXECUTED
+4
+EXECUTED
+4
+EXECUTED
+4
+EXECUTED
 Grade: None.
 Turn 6:
-&gt; 5
+&gt; 5555
+[9, 3, 7, 8]
+[5, 5, 5, 5]
+5
+EXECUTED
+5
+EXECUTED
+5
+EXECUTED
+5
+EXECUTED
 Grade: None.
 Turn 7:
-&gt; 6
+&gt; 6666
+[9, 3, 7, 8]
+[6, 6, 6, 6]
+6
+EXECUTED
+6
+EXECUTED
+6
+EXECUTED
+6
+EXECUTED
 Grade: None.
 Turn 8:
-&gt; 7
-Grade: None.
+&gt; 7777
+[9, 3, 7, 8]
+[7, 7, 7, 7]
+7
+EXECUTED
+7
+EXECUTED
+7
+EXECUTED
+7
+Grade: 1 bull(s) + and 2 cow(s).
 Turn 9:
-&gt; 8
+&gt; 8888
+[9, 3, 7, 8]
+[8, 8, 8, 8]
+8
+EXECUTED
+8
+EXECUTED
+8
+EXECUTED
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 10:
+&gt; 9999
+[9, 3, 7, 8]
+[9, 9, 9, 9]
+9
+EXECUTED
+9
+9
+9
+Grade: 1 bull(s).
+Turn 11:
+&gt; 3789
+[9, 3, 7, 8]
+[3, 7, 8, 9]
+3
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+9
+Grade: 3 cow(s).
+Turn 12:
+&gt; 7389
+[9, 3, 7, 8]
+[7, 3, 8, 9]
+7
+EXECUTED
+3
+EXECUTED
+8
+EXECUTED
+9
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 13:
+&gt; 8379
+[9, 3, 7, 8]
+[8, 3, 7, 9]
+8
+EXECUTED
+3
+EXECUTED
+7
+EXECUTED
+9
+Grade: 2 bull(s) + and 1 cow(s).
+Turn 14:
+&gt; 3879
+[9, 3, 7, 8]
+[3, 8, 7, 9]
+3
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+9
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 15:
+&gt; 7839
+[9, 3, 7, 8]
+[7, 8, 3, 9]
+7
+EXECUTED
+8
+EXECUTED
+3
+9
+Grade: 2 cow(s).
+Turn 16:
+&gt; 8739
+[9, 3, 7, 8]
+[8, 7, 3, 9]
+8
+EXECUTED
+7
+EXECUTED
+3
+9
+Grade: 2 cow(s).
+Turn 17:
+&gt; 9738
+[9, 3, 7, 8]
+[9, 7, 3, 8]
+9
+EXECUTED
+7
+EXECUTED
+3
+8
+EXECUTED
+Grade: 2 bull(s) + and 1 cow(s).
+Turn 18:
+&gt; 7938
+[9, 3, 7, 8]
+[7, 9, 3, 8]
+7
+EXECUTED
+9
+3
+EXECUTED
+8
+EXECUTED
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 19:
+&gt; 3978
+[9, 3, 7, 8]
+[3, 9, 7, 8]
+3
+EXECUTED
+9
+7
+EXECUTED
+8
+EXECUTED
+Grade: 2 bull(s) + and 1 cow(s).
+Turn 20:
+&gt; 9378
+[9, 3, 7, 8]
+[9, 3, 7, 8]
+9
+EXECUTED
+3
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+Grade: 4 bull(s).
+Congratulations! You guessed the secret code.
+?[1;31m
+Start test 3?[0m
+Input the length of the secret code:
+&gt; 6
+Input the number of possible symbols in the code:
+&gt; 10
+The secret is prepared: ****** (0-9).
+Okay, let's start a game!
+Turn 1:
+&gt; 000000
+[9, 2, 5, 8, 7, 4]
+[0, 0, 0, 0, 0, 0]
+0
+EXECUTED
+0
+EXECUTED
+0
+EXECUTED
+0
+EXECUTED
+0
+EXECUTED
+0
+EXECUTED
+Grade: None.
+Turn 2:
+&gt; 111111
+[9, 2, 5, 8, 7, 4]
+[1, 1, 1, 1, 1, 1]
+1
+EXECUTED
+1
+EXECUTED
+1
+EXECUTED
+1
+EXECUTED
+1
+EXECUTED
+1
+EXECUTED
+Grade: None.
+Turn 3:
+&gt; 222222
+[9, 2, 5, 8, 7, 4]
+[2, 2, 2, 2, 2, 2]
+2
+EXECUTED
+2
+EXECUTED
+2
+2
+2
+2
+Grade: 1 bull(s) + and 1 cow(s).
+Turn 4:
+&gt; 333333
+[9, 2, 5, 8, 7, 4]
+[3, 3, 3, 3, 3, 3]
+3
+EXECUTED
+3
+EXECUTED
+3
+EXECUTED
+3
+EXECUTED
+3
+EXECUTED
+3
+EXECUTED
+Grade: None.
+Turn 5:
+&gt; 444444
+[9, 2, 5, 8, 7, 4]
+[4, 4, 4, 4, 4, 4]
+4
+EXECUTED
+4
+EXECUTED
+4
+EXECUTED
+4
+EXECUTED
+4
+EXECUTED
+4
+EXECUTED
+Grade: 1 bull(s) + and 5 cow(s).
+Turn 6:
+&gt; 555555
+[9, 2, 5, 8, 7, 4]
+[5, 5, 5, 5, 5, 5]
+5
+EXECUTED
+5
+EXECUTED
+5
+EXECUTED
+5
+5
+5
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 7:
+&gt; 666666
+[9, 2, 5, 8, 7, 4]
+[6, 6, 6, 6, 6, 6]
+6
+EXECUTED
+6
+EXECUTED
+6
+EXECUTED
+6
+EXECUTED
+6
+EXECUTED
+6
+EXECUTED
+Grade: None.
+Turn 8:
+&gt; 777777
+[9, 2, 5, 8, 7, 4]
+[7, 7, 7, 7, 7, 7]
+7
+EXECUTED
+7
+EXECUTED
+7
+EXECUTED
+7
+EXECUTED
+7
+EXECUTED
+7
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 9:
+&gt; 888888
+[9, 2, 5, 8, 7, 4]
+[8, 8, 8, 8, 8, 8]
+8
+EXECUTED
+8
+EXECUTED
+8
+EXECUTED
+8
+EXECUTED
+8
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 10:
+&gt; 999999
+[9, 2, 5, 8, 7, 4]
+[9, 9, 9, 9, 9, 9]
+9
+EXECUTED
+9
+9
+9
+9
+9
+Grade: 1 bull(s).
+Turn 11:
+&gt; 245789
+[9, 2, 5, 8, 7, 4]
+[2, 4, 5, 7, 8, 9]
+2
+EXECUTED
+4
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+8
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 12:
+&gt; 425789
+[9, 2, 5, 8, 7, 4]
+[4, 2, 5, 7, 8, 9]
+4
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+8
+9
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 13:
+&gt; 524789
+[9, 2, 5, 8, 7, 4]
+[5, 2, 4, 7, 8, 9]
+5
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+8
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 14:
+&gt; 254789
+[9, 2, 5, 8, 7, 4]
+[2, 5, 4, 7, 8, 9]
+2
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+8
+9
+Grade: 4 cow(s).
+Turn 15:
+&gt; 452789
+[9, 2, 5, 8, 7, 4]
+[4, 5, 2, 7, 8, 9]
+4
+EXECUTED
+5
+EXECUTED
+2
+7
+EXECUTED
+8
+9
+Grade: 3 cow(s).
+Turn 16:
+&gt; 542789
+[9, 2, 5, 8, 7, 4]
+[5, 4, 2, 7, 8, 9]
+5
+EXECUTED
+4
+EXECUTED
+2
+7
+EXECUTED
+8
+9
+Grade: 3 cow(s).
+Turn 17:
+&gt; 742589
+[9, 2, 5, 8, 7, 4]
+[7, 4, 2, 5, 8, 9]
+7
+EXECUTED
+4
+EXECUTED
+2
+5
+EXECUTED
+8
+9
+Grade: 3 cow(s).
+Turn 18:
+&gt; 472589
+[9, 2, 5, 8, 7, 4]
+[4, 7, 2, 5, 8, 9]
+4
+EXECUTED
+7
+EXECUTED
+2
+5
+EXECUTED
+8
+9
+Grade: 3 cow(s).
+Turn 19:
+&gt; 274589
+[9, 2, 5, 8, 7, 4]
+[2, 7, 4, 5, 8, 9]
+2
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+5
+8
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 20:
+&gt; 724589
+[9, 2, 5, 8, 7, 4]
+[7, 2, 4, 5, 8, 9]
+7
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+5
+8
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 21:
+&gt; 427589
+[9, 2, 5, 8, 7, 4]
+[4, 2, 7, 5, 8, 9]
+4
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+5
+8
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 22:
+&gt; 247589
+[9, 2, 5, 8, 7, 4]
+[2, 4, 7, 5, 8, 9]
+2
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+5
+8
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 23:
+&gt; 257489
+[9, 2, 5, 8, 7, 4]
+[2, 5, 7, 4, 8, 9]
+2
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+8
+9
+Grade: 4 cow(s).
+Turn 24:
+&gt; 527489
+[9, 2, 5, 8, 7, 4]
+[5, 2, 7, 4, 8, 9]
+5
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+8
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 25:
+&gt; 725489
+[9, 2, 5, 8, 7, 4]
+[7, 2, 5, 4, 8, 9]
+7
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+8
+9
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 26:
+&gt; 275489
+[9, 2, 5, 8, 7, 4]
+[2, 7, 5, 4, 8, 9]
+2
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+8
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 27:
+&gt; 572489
+[9, 2, 5, 8, 7, 4]
+[5, 7, 2, 4, 8, 9]
+5
+EXECUTED
+7
+EXECUTED
+2
+4
+EXECUTED
+8
+9
+Grade: 3 cow(s).
+Turn 28:
+&gt; 752489
+[9, 2, 5, 8, 7, 4]
+[7, 5, 2, 4, 8, 9]
+7
+EXECUTED
+5
+EXECUTED
+2
+4
+EXECUTED
+8
+9
+Grade: 3 cow(s).
+Turn 29:
+&gt; 754289
+[9, 2, 5, 8, 7, 4]
+[7, 5, 4, 2, 8, 9]
+7
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+2
+8
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 30:
+&gt; 574289
+[9, 2, 5, 8, 7, 4]
+[5, 7, 4, 2, 8, 9]
+5
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+2
+8
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 31:
+&gt; 475289
+[9, 2, 5, 8, 7, 4]
+[4, 7, 5, 2, 8, 9]
+4
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+2
+8
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 32:
+&gt; 745289
+[9, 2, 5, 8, 7, 4]
+[7, 4, 5, 2, 8, 9]
+7
+EXECUTED
+4
+EXECUTED
+5
+EXECUTED
+2
+8
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 33:
+&gt; 547289
+[9, 2, 5, 8, 7, 4]
+[5, 4, 7, 2, 8, 9]
+5
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+2
+8
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 34:
+&gt; 457289
+[9, 2, 5, 8, 7, 4]
+[4, 5, 7, 2, 8, 9]
+4
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+2
+8
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 35:
+&gt; 857249
+[9, 2, 5, 8, 7, 4]
+[8, 5, 7, 2, 4, 9]
+8
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+2
+4
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 36:
+&gt; 587249
+[9, 2, 5, 8, 7, 4]
+[5, 8, 7, 2, 4, 9]
+5
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+2
+4
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 37:
+&gt; 785249
+[9, 2, 5, 8, 7, 4]
+[7, 8, 5, 2, 4, 9]
+7
+EXECUTED
+8
+EXECUTED
+5
+EXECUTED
+2
+4
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 38:
+&gt; 875249
+[9, 2, 5, 8, 7, 4]
+[8, 7, 5, 2, 4, 9]
+8
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+2
+4
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 39:
+&gt; 578249
+[9, 2, 5, 8, 7, 4]
+[5, 7, 8, 2, 4, 9]
+5
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+2
+4
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 40:
+&gt; 758249
+[9, 2, 5, 8, 7, 4]
+[7, 5, 8, 2, 4, 9]
+7
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+2
+4
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 41:
+&gt; 258749
+[9, 2, 5, 8, 7, 4]
+[2, 5, 8, 7, 4, 9]
+2
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+9
+Grade: 5 cow(s).
+Turn 42:
+&gt; 528749
+[9, 2, 5, 8, 7, 4]
+[5, 2, 8, 7, 4, 9]
+5
+EXECUTED
+2
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+9
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 43:
+&gt; 825749
+[9, 2, 5, 8, 7, 4]
+[8, 2, 5, 7, 4, 9]
+8
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+9
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 44:
+&gt; 285749
+[9, 2, 5, 8, 7, 4]
+[2, 8, 5, 7, 4, 9]
+2
+EXECUTED
+8
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+9
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 45:
+&gt; 582749
+[9, 2, 5, 8, 7, 4]
+[5, 8, 2, 7, 4, 9]
+5
+EXECUTED
+8
+EXECUTED
+2
+7
+EXECUTED
+4
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 46:
+&gt; 852749
+[9, 2, 5, 8, 7, 4]
+[8, 5, 2, 7, 4, 9]
+8
+EXECUTED
+5
+EXECUTED
+2
+7
+EXECUTED
+4
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 47:
+&gt; 872549
+[9, 2, 5, 8, 7, 4]
+[8, 7, 2, 5, 4, 9]
+8
+EXECUTED
+7
+EXECUTED
+2
+5
+EXECUTED
+4
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 48:
+&gt; 782549
+[9, 2, 5, 8, 7, 4]
+[7, 8, 2, 5, 4, 9]
+7
+EXECUTED
+8
+EXECUTED
+2
+5
+EXECUTED
+4
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 49:
+&gt; 287549
+[9, 2, 5, 8, 7, 4]
+[2, 8, 7, 5, 4, 9]
+2
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+5
+4
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 50:
+&gt; 827549
+[9, 2, 5, 8, 7, 4]
+[8, 2, 7, 5, 4, 9]
+8
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+5
+4
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 51:
+&gt; 728549
+[9, 2, 5, 8, 7, 4]
+[7, 2, 8, 5, 4, 9]
+7
+EXECUTED
+2
+EXECUTED
+8
+EXECUTED
+5
+4
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 52:
+&gt; 278549
+[9, 2, 5, 8, 7, 4]
+[2, 7, 8, 5, 4, 9]
+2
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+5
+4
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 53:
+&gt; 275849
+[9, 2, 5, 8, 7, 4]
+[2, 7, 5, 8, 4, 9]
+2
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+9
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 54:
+&gt; 725849
+[9, 2, 5, 8, 7, 4]
+[7, 2, 5, 8, 4, 9]
+7
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+9
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 55:
+&gt; 527849
+[9, 2, 5, 8, 7, 4]
+[5, 2, 7, 8, 4, 9]
+5
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+9
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 56:
+&gt; 257849
+[9, 2, 5, 8, 7, 4]
+[2, 5, 7, 8, 4, 9]
+2
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+9
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 57:
+&gt; 752849
+[9, 2, 5, 8, 7, 4]
+[7, 5, 2, 8, 4, 9]
+7
+EXECUTED
+5
+EXECUTED
+2
+8
+EXECUTED
+4
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 58:
+&gt; 572849
+[9, 2, 5, 8, 7, 4]
+[5, 7, 2, 8, 4, 9]
+5
+EXECUTED
+7
+EXECUTED
+2
+8
+EXECUTED
+4
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 59:
+&gt; 472859
+[9, 2, 5, 8, 7, 4]
+[4, 7, 2, 8, 5, 9]
+4
+EXECUTED
+7
+EXECUTED
+2
+8
+EXECUTED
+5
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 60:
+&gt; 742859
+[9, 2, 5, 8, 7, 4]
+[7, 4, 2, 8, 5, 9]
+7
+EXECUTED
+4
+EXECUTED
+2
+8
+EXECUTED
+5
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 61:
+&gt; 247859
+[9, 2, 5, 8, 7, 4]
+[2, 4, 7, 8, 5, 9]
+2
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+5
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 62:
+&gt; 427859
+[9, 2, 5, 8, 7, 4]
+[4, 2, 7, 8, 5, 9]
+4
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+5
+9
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 63:
+&gt; 724859
+[9, 2, 5, 8, 7, 4]
+[7, 2, 4, 8, 5, 9]
+7
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+8
+EXECUTED
+5
+9
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 64:
+&gt; 274859
+[9, 2, 5, 8, 7, 4]
+[2, 7, 4, 8, 5, 9]
+2
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+8
+EXECUTED
+5
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 65:
+&gt; 874259
+[9, 2, 5, 8, 7, 4]
+[8, 7, 4, 2, 5, 9]
+8
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+2
+5
+9
+Grade: 3 cow(s).
+Turn 66:
+&gt; 784259
+[9, 2, 5, 8, 7, 4]
+[7, 8, 4, 2, 5, 9]
+7
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+2
+5
+9
+Grade: 3 cow(s).
+Turn 67:
+&gt; 487259
+[9, 2, 5, 8, 7, 4]
+[4, 8, 7, 2, 5, 9]
+4
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+2
+5
+9
+Grade: 3 cow(s).
+Turn 68:
+&gt; 847259
+[9, 2, 5, 8, 7, 4]
+[8, 4, 7, 2, 5, 9]
+8
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+2
+5
+9
+Grade: 3 cow(s).
+Turn 69:
+&gt; 748259
+[9, 2, 5, 8, 7, 4]
+[7, 4, 8, 2, 5, 9]
+7
+EXECUTED
+4
+EXECUTED
+8
+EXECUTED
+2
+5
+9
+Grade: 3 cow(s).
+Turn 70:
+&gt; 478259
+[9, 2, 5, 8, 7, 4]
+[4, 7, 8, 2, 5, 9]
+4
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+2
+5
+9
+Grade: 3 cow(s).
+Turn 71:
+&gt; 428759
+[9, 2, 5, 8, 7, 4]
+[4, 2, 8, 7, 5, 9]
+4
+EXECUTED
+2
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+5
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 72:
+&gt; 248759
+[9, 2, 5, 8, 7, 4]
+[2, 4, 8, 7, 5, 9]
+2
+EXECUTED
+4
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+5
+9
+Grade: 4 cow(s).
+Turn 73:
+&gt; 842759
+[9, 2, 5, 8, 7, 4]
+[8, 4, 2, 7, 5, 9]
+8
+EXECUTED
+4
+EXECUTED
+2
+7
+EXECUTED
+5
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 74:
+&gt; 482759
+[9, 2, 5, 8, 7, 4]
+[4, 8, 2, 7, 5, 9]
+4
+EXECUTED
+8
+EXECUTED
+2
+7
+EXECUTED
+5
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 75:
+&gt; 284759
+[9, 2, 5, 8, 7, 4]
+[2, 8, 4, 7, 5, 9]
+2
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+5
+9
+Grade: 4 cow(s).
+Turn 76:
+&gt; 824759
+[9, 2, 5, 8, 7, 4]
+[8, 2, 4, 7, 5, 9]
+8
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+5
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 77:
+&gt; 827459
+[9, 2, 5, 8, 7, 4]
+[8, 2, 7, 4, 5, 9]
+8
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+5
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 78:
+&gt; 287459
+[9, 2, 5, 8, 7, 4]
+[2, 8, 7, 4, 5, 9]
+2
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+5
+9
+Grade: 4 cow(s).
+Turn 79:
+&gt; 782459
+[9, 2, 5, 8, 7, 4]
+[7, 8, 2, 4, 5, 9]
+7
+EXECUTED
+8
+EXECUTED
+2
+4
+EXECUTED
+5
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 80:
+&gt; 872459
+[9, 2, 5, 8, 7, 4]
+[8, 7, 2, 4, 5, 9]
+8
+EXECUTED
+7
+EXECUTED
+2
+4
+EXECUTED
+5
+EXECUTED
+9
+Grade: 4 cow(s).
+Turn 81:
+&gt; 278459
+[9, 2, 5, 8, 7, 4]
+[2, 7, 8, 4, 5, 9]
+2
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+5
+9
+Grade: 4 cow(s).
+Turn 82:
+&gt; 728459
+[9, 2, 5, 8, 7, 4]
+[7, 2, 8, 4, 5, 9]
+7
+EXECUTED
+2
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+5
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 83:
+&gt; 528479
+[9, 2, 5, 8, 7, 4]
+[5, 2, 8, 4, 7, 9]
+5
+EXECUTED
+2
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+9
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 84:
+&gt; 258479
+[9, 2, 5, 8, 7, 4]
+[2, 5, 8, 4, 7, 9]
+2
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+9
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 85:
+&gt; 852479
+[9, 2, 5, 8, 7, 4]
+[8, 5, 2, 4, 7, 9]
+8
+EXECUTED
+5
+EXECUTED
+2
+4
+EXECUTED
+7
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 86:
+&gt; 582479
+[9, 2, 5, 8, 7, 4]
+[5, 8, 2, 4, 7, 9]
+5
+EXECUTED
+8
+EXECUTED
+2
+4
+EXECUTED
+7
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 87:
+&gt; 285479
+[9, 2, 5, 8, 7, 4]
+[2, 8, 5, 4, 7, 9]
+2
+EXECUTED
+8
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+9
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 88:
+&gt; 825479
+[9, 2, 5, 8, 7, 4]
+[8, 2, 5, 4, 7, 9]
+8
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+9
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 89:
+&gt; 425879
+[9, 2, 5, 8, 7, 4]
+[4, 2, 5, 8, 7, 9]
+4
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+9
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 90:
+&gt; 245879
+[9, 2, 5, 8, 7, 4]
+[2, 4, 5, 8, 7, 9]
+2
+EXECUTED
+4
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+9
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 91:
+&gt; 542879
+[9, 2, 5, 8, 7, 4]
+[5, 4, 2, 8, 7, 9]
+5
+EXECUTED
+4
+EXECUTED
+2
+8
+EXECUTED
+7
+EXECUTED
+9
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 92:
+&gt; 452879
+[9, 2, 5, 8, 7, 4]
+[4, 5, 2, 8, 7, 9]
+4
+EXECUTED
+5
+EXECUTED
+2
+8
+EXECUTED
+7
+EXECUTED
+9
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 93:
+&gt; 254879
+[9, 2, 5, 8, 7, 4]
+[2, 5, 4, 8, 7, 9]
+2
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+9
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 94:
+&gt; 524879
+[9, 2, 5, 8, 7, 4]
+[5, 2, 4, 8, 7, 9]
+5
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+9
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 95:
+&gt; 584279
+[9, 2, 5, 8, 7, 4]
+[5, 8, 4, 2, 7, 9]
+5
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+2
+7
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 96:
+&gt; 854279
+[9, 2, 5, 8, 7, 4]
+[8, 5, 4, 2, 7, 9]
+8
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+2
+7
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 97:
+&gt; 458279
+[9, 2, 5, 8, 7, 4]
+[4, 5, 8, 2, 7, 9]
+4
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+2
+7
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 98:
+&gt; 548279
+[9, 2, 5, 8, 7, 4]
+[5, 4, 8, 2, 7, 9]
+5
+EXECUTED
+4
+EXECUTED
+8
+EXECUTED
+2
+7
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 99:
+&gt; 845279
+[9, 2, 5, 8, 7, 4]
+[8, 4, 5, 2, 7, 9]
+8
+EXECUTED
+4
+EXECUTED
+5
+EXECUTED
+2
+7
+EXECUTED
+9
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 100:
+&gt; 485279
+[9, 2, 5, 8, 7, 4]
+[4, 8, 5, 2, 7, 9]
+4
+EXECUTED
+8
+EXECUTED
+5
+EXECUTED
+2
+7
+EXECUTED
+9
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 101:
+&gt; 482579
+[9, 2, 5, 8, 7, 4]
+[4, 8, 2, 5, 7, 9]
+4
+EXECUTED
+8
+EXECUTED
+2
+5
+EXECUTED
+7
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 102:
+&gt; 842579
+[9, 2, 5, 8, 7, 4]
+[8, 4, 2, 5, 7, 9]
+8
+EXECUTED
+4
+EXECUTED
+2
+5
+EXECUTED
+7
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 103:
+&gt; 248579
+[9, 2, 5, 8, 7, 4]
+[2, 4, 8, 5, 7, 9]
+2
+EXECUTED
+4
+EXECUTED
+8
+EXECUTED
+5
+7
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 104:
+&gt; 428579
+[9, 2, 5, 8, 7, 4]
+[4, 2, 8, 5, 7, 9]
+4
+EXECUTED
+2
+EXECUTED
+8
+EXECUTED
+5
+7
+EXECUTED
+9
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 105:
+&gt; 824579
+[9, 2, 5, 8, 7, 4]
+[8, 2, 4, 5, 7, 9]
+8
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+5
+7
+EXECUTED
+9
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 106:
+&gt; 284579
+[9, 2, 5, 8, 7, 4]
+[2, 8, 4, 5, 7, 9]
+2
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+5
+7
+EXECUTED
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 107:
+&gt; 784529
+[9, 2, 5, 8, 7, 4]
+[7, 8, 4, 5, 2, 9]
+7
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+5
+2
+9
+Grade: 3 cow(s).
+Turn 108:
+&gt; 874529
+[9, 2, 5, 8, 7, 4]
+[8, 7, 4, 5, 2, 9]
+8
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+5
+2
+9
+Grade: 3 cow(s).
+Turn 109:
+&gt; 478529
+[9, 2, 5, 8, 7, 4]
+[4, 7, 8, 5, 2, 9]
+4
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+5
+2
+9
+Grade: 3 cow(s).
+Turn 110:
+&gt; 748529
+[9, 2, 5, 8, 7, 4]
+[7, 4, 8, 5, 2, 9]
+7
+EXECUTED
+4
+EXECUTED
+8
+EXECUTED
+5
+2
+9
+Grade: 3 cow(s).
+Turn 111:
+&gt; 847529
+[9, 2, 5, 8, 7, 4]
+[8, 4, 7, 5, 2, 9]
+8
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+5
+2
+9
+Grade: 3 cow(s).
+Turn 112:
+&gt; 487529
+[9, 2, 5, 8, 7, 4]
+[4, 8, 7, 5, 2, 9]
+4
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+5
+2
+9
+Grade: 3 cow(s).
+Turn 113:
+&gt; 587429
+[9, 2, 5, 8, 7, 4]
+[5, 8, 7, 4, 2, 9]
+5
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+2
+9
+Grade: 4 cow(s).
+Turn 114:
+&gt; 857429
+[9, 2, 5, 8, 7, 4]
+[8, 5, 7, 4, 2, 9]
+8
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+2
+9
+Grade: 4 cow(s).
+Turn 115:
+&gt; 758429
+[9, 2, 5, 8, 7, 4]
+[7, 5, 8, 4, 2, 9]
+7
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+2
+9
+Grade: 4 cow(s).
+Turn 116:
+&gt; 578429
+[9, 2, 5, 8, 7, 4]
+[5, 7, 8, 4, 2, 9]
+5
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+2
+9
+Grade: 4 cow(s).
+Turn 117:
+&gt; 875429
+[9, 2, 5, 8, 7, 4]
+[8, 7, 5, 4, 2, 9]
+8
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+2
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 118:
+&gt; 785429
+[9, 2, 5, 8, 7, 4]
+[7, 8, 5, 4, 2, 9]
+7
+EXECUTED
+8
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+2
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 119:
+&gt; 745829
+[9, 2, 5, 8, 7, 4]
+[7, 4, 5, 8, 2, 9]
+7
+EXECUTED
+4
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+2
+9
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 120:
+&gt; 475829
+[9, 2, 5, 8, 7, 4]
+[4, 7, 5, 8, 2, 9]
+4
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+2
+9
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 121:
+&gt; 574829
+[9, 2, 5, 8, 7, 4]
+[5, 7, 4, 8, 2, 9]
+5
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+8
+EXECUTED
+2
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 122:
+&gt; 754829
+[9, 2, 5, 8, 7, 4]
+[7, 5, 4, 8, 2, 9]
+7
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+8
+EXECUTED
+2
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 123:
+&gt; 457829
+[9, 2, 5, 8, 7, 4]
+[4, 5, 7, 8, 2, 9]
+4
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+2
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 124:
+&gt; 547829
+[9, 2, 5, 8, 7, 4]
+[5, 4, 7, 8, 2, 9]
+5
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+2
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 125:
+&gt; 548729
+[9, 2, 5, 8, 7, 4]
+[5, 4, 8, 7, 2, 9]
+5
+EXECUTED
+4
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+2
+9
+Grade: 4 cow(s).
+Turn 126:
+&gt; 458729
+[9, 2, 5, 8, 7, 4]
+[4, 5, 8, 7, 2, 9]
+4
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+2
+9
+Grade: 4 cow(s).
+Turn 127:
+&gt; 854729
+[9, 2, 5, 8, 7, 4]
+[8, 5, 4, 7, 2, 9]
+8
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+2
+9
+Grade: 4 cow(s).
+Turn 128:
+&gt; 584729
+[9, 2, 5, 8, 7, 4]
+[5, 8, 4, 7, 2, 9]
+5
+EXECUTED
+8
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+2
+9
+Grade: 4 cow(s).
+Turn 129:
+&gt; 485729
+[9, 2, 5, 8, 7, 4]
+[4, 8, 5, 7, 2, 9]
+4
+EXECUTED
+8
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+2
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 130:
+&gt; 845729
+[9, 2, 5, 8, 7, 4]
+[8, 4, 5, 7, 2, 9]
+8
+EXECUTED
+4
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+2
+9
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 131:
+&gt; 945728
+[9, 2, 5, 8, 7, 4]
+[9, 4, 5, 7, 2, 8]
+9
+EXECUTED
+4
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+2
+8
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 132:
+&gt; 495728
+[9, 2, 5, 8, 7, 4]
+[4, 9, 5, 7, 2, 8]
+4
+EXECUTED
+9
+5
+EXECUTED
+7
+EXECUTED
+2
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 133:
+&gt; 594728
+[9, 2, 5, 8, 7, 4]
+[5, 9, 4, 7, 2, 8]
+5
+EXECUTED
+9
+4
+EXECUTED
+7
+EXECUTED
+2
+EXECUTED
+8
+Grade: 4 cow(s).
+Turn 134:
+&gt; 954728
+[9, 2, 5, 8, 7, 4]
+[9, 5, 4, 7, 2, 8]
+9
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+2
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 135:
+&gt; 459728
+[9, 2, 5, 8, 7, 4]
+[4, 5, 9, 7, 2, 8]
+4
+EXECUTED
+5
+EXECUTED
+9
+7
+EXECUTED
+2
+8
+Grade: 3 cow(s).
+Turn 136:
+&gt; 549728
+[9, 2, 5, 8, 7, 4]
+[5, 4, 9, 7, 2, 8]
+5
+EXECUTED
+4
+EXECUTED
+9
+7
+EXECUTED
+2
+8
+Grade: 3 cow(s).
+Turn 137:
+&gt; 749528
+[9, 2, 5, 8, 7, 4]
+[7, 4, 9, 5, 2, 8]
+7
+EXECUTED
+4
+EXECUTED
+9
+5
+EXECUTED
+2
+8
+Grade: 3 cow(s).
+Turn 138:
+&gt; 479528
+[9, 2, 5, 8, 7, 4]
+[4, 7, 9, 5, 2, 8]
+4
+EXECUTED
+7
+EXECUTED
+9
+5
+EXECUTED
+2
+8
+Grade: 3 cow(s).
+Turn 139:
+&gt; 974528
+[9, 2, 5, 8, 7, 4]
+[9, 7, 4, 5, 2, 8]
+9
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+5
+2
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 140:
+&gt; 794528
+[9, 2, 5, 8, 7, 4]
+[7, 9, 4, 5, 2, 8]
+7
+EXECUTED
+9
+4
+EXECUTED
+5
+2
+EXECUTED
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 141:
+&gt; 497528
+[9, 2, 5, 8, 7, 4]
+[4, 9, 7, 5, 2, 8]
+4
+EXECUTED
+9
+7
+EXECUTED
+5
+2
+EXECUTED
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 142:
+&gt; 947528
+[9, 2, 5, 8, 7, 4]
+[9, 4, 7, 5, 2, 8]
+9
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+5
+2
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 143:
+&gt; 957428
+[9, 2, 5, 8, 7, 4]
+[9, 5, 7, 4, 2, 8]
+9
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+2
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 144:
+&gt; 597428
+[9, 2, 5, 8, 7, 4]
+[5, 9, 7, 4, 2, 8]
+5
+EXECUTED
+9
+7
+EXECUTED
+4
+EXECUTED
+2
+EXECUTED
+8
+Grade: 4 cow(s).
+Turn 145:
+&gt; 795428
+[9, 2, 5, 8, 7, 4]
+[7, 9, 5, 4, 2, 8]
+7
+EXECUTED
+9
+5
+EXECUTED
+4
+EXECUTED
+2
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 146:
+&gt; 975428
+[9, 2, 5, 8, 7, 4]
+[9, 7, 5, 4, 2, 8]
+9
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+2
+8
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 147:
+&gt; 579428
+[9, 2, 5, 8, 7, 4]
+[5, 7, 9, 4, 2, 8]
+5
+EXECUTED
+7
+EXECUTED
+9
+4
+EXECUTED
+2
+8
+Grade: 3 cow(s).
+Turn 148:
+&gt; 759428
+[9, 2, 5, 8, 7, 4]
+[7, 5, 9, 4, 2, 8]
+7
+EXECUTED
+5
+EXECUTED
+9
+4
+EXECUTED
+2
+8
+Grade: 3 cow(s).
+Turn 149:
+&gt; 754928
+[9, 2, 5, 8, 7, 4]
+[7, 5, 4, 9, 2, 8]
+7
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+9
+2
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 150:
+&gt; 574928
+[9, 2, 5, 8, 7, 4]
+[5, 7, 4, 9, 2, 8]
+5
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+9
+2
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 151:
+&gt; 475928
+[9, 2, 5, 8, 7, 4]
+[4, 7, 5, 9, 2, 8]
+4
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+9
+2
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 152:
+&gt; 745928
+[9, 2, 5, 8, 7, 4]
+[7, 4, 5, 9, 2, 8]
+7
+EXECUTED
+4
+EXECUTED
+5
+EXECUTED
+9
+2
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 153:
+&gt; 547928
+[9, 2, 5, 8, 7, 4]
+[5, 4, 7, 9, 2, 8]
+5
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+9
+2
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 154:
+&gt; 457928
+[9, 2, 5, 8, 7, 4]
+[4, 5, 7, 9, 2, 8]
+4
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+9
+2
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 155:
+&gt; 257948
+[9, 2, 5, 8, 7, 4]
+[2, 5, 7, 9, 4, 8]
+2
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+9
+4
+EXECUTED
+8
+EXECUTED
+Grade: 5 cow(s).
+Turn 156:
+&gt; 527948
+[9, 2, 5, 8, 7, 4]
+[5, 2, 7, 9, 4, 8]
+5
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+9
+4
+EXECUTED
+8
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 157:
+&gt; 725948
+[9, 2, 5, 8, 7, 4]
+[7, 2, 5, 9, 4, 8]
+7
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+9
+4
+EXECUTED
+8
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 158:
+&gt; 275948
+[9, 2, 5, 8, 7, 4]
+[2, 7, 5, 9, 4, 8]
+2
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+9
+4
+EXECUTED
+8
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 159:
+&gt; 572948
+[9, 2, 5, 8, 7, 4]
+[5, 7, 2, 9, 4, 8]
+5
+EXECUTED
+7
+EXECUTED
+2
+9
+4
+EXECUTED
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 160:
+&gt; 752948
+[9, 2, 5, 8, 7, 4]
+[7, 5, 2, 9, 4, 8]
+7
+EXECUTED
+5
+EXECUTED
+2
+9
+4
+EXECUTED
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 161:
+&gt; 952748
+[9, 2, 5, 8, 7, 4]
+[9, 5, 2, 7, 4, 8]
+9
+EXECUTED
+5
+EXECUTED
+2
+7
+EXECUTED
+4
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 162:
+&gt; 592748
+[9, 2, 5, 8, 7, 4]
+[5, 9, 2, 7, 4, 8]
+5
+EXECUTED
+9
+2
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+8
+Grade: 4 cow(s).
+Turn 163:
+&gt; 295748
+[9, 2, 5, 8, 7, 4]
+[2, 9, 5, 7, 4, 8]
+2
+EXECUTED
+9
+5
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 164:
+&gt; 925748
+[9, 2, 5, 8, 7, 4]
+[9, 2, 5, 7, 4, 8]
+9
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+8
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 165:
+&gt; 529748
+[9, 2, 5, 8, 7, 4]
+[5, 2, 9, 7, 4, 8]
+5
+EXECUTED
+2
+EXECUTED
+9
+7
+EXECUTED
+4
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 166:
+&gt; 259748
+[9, 2, 5, 8, 7, 4]
+[2, 5, 9, 7, 4, 8]
+2
+EXECUTED
+5
+EXECUTED
+9
+7
+EXECUTED
+4
+EXECUTED
+8
+Grade: 4 cow(s).
+Turn 167:
+&gt; 279548
+[9, 2, 5, 8, 7, 4]
+[2, 7, 9, 5, 4, 8]
+2
+EXECUTED
+7
+EXECUTED
+9
+5
+EXECUTED
+4
+EXECUTED
+8
+Grade: 4 cow(s).
+Turn 168:
+&gt; 729548
+[9, 2, 5, 8, 7, 4]
+[7, 2, 9, 5, 4, 8]
+7
+EXECUTED
+2
+EXECUTED
+9
+5
+EXECUTED
+4
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 169:
+&gt; 927548
+[9, 2, 5, 8, 7, 4]
+[9, 2, 7, 5, 4, 8]
+9
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+5
+4
+EXECUTED
+8
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 170:
+&gt; 297548
+[9, 2, 5, 8, 7, 4]
+[2, 9, 7, 5, 4, 8]
+2
+EXECUTED
+9
+7
+EXECUTED
+5
+4
+EXECUTED
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 171:
+&gt; 792548
+[9, 2, 5, 8, 7, 4]
+[7, 9, 2, 5, 4, 8]
+7
+EXECUTED
+9
+2
+EXECUTED
+5
+4
+EXECUTED
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 172:
+&gt; 972548
+[9, 2, 5, 8, 7, 4]
+[9, 7, 2, 5, 4, 8]
+9
+EXECUTED
+7
+EXECUTED
+2
+5
+EXECUTED
+4
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 173:
+&gt; 975248
+[9, 2, 5, 8, 7, 4]
+[9, 7, 5, 2, 4, 8]
+9
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+2
+4
+EXECUTED
+8
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 174:
+&gt; 795248
+[9, 2, 5, 8, 7, 4]
+[7, 9, 5, 2, 4, 8]
+7
+EXECUTED
+9
+5
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 175:
+&gt; 597248
+[9, 2, 5, 8, 7, 4]
+[5, 9, 7, 2, 4, 8]
+5
+EXECUTED
+9
+7
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+8
+Grade: 4 cow(s).
+Turn 176:
+&gt; 957248
+[9, 2, 5, 8, 7, 4]
+[9, 5, 7, 2, 4, 8]
+9
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+2
+4
+EXECUTED
+8
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 177:
+&gt; 759248
+[9, 2, 5, 8, 7, 4]
+[7, 5, 9, 2, 4, 8]
+7
+EXECUTED
+5
+EXECUTED
+9
+2
+4
+EXECUTED
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 178:
+&gt; 579248
+[9, 2, 5, 8, 7, 4]
+[5, 7, 9, 2, 4, 8]
+5
+EXECUTED
+7
+EXECUTED
+9
+2
+4
+EXECUTED
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 179:
+&gt; 479258
+[9, 2, 5, 8, 7, 4]
+[4, 7, 9, 2, 5, 8]
+4
+EXECUTED
+7
+EXECUTED
+9
+2
+5
+EXECUTED
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 180:
+&gt; 749258
+[9, 2, 5, 8, 7, 4]
+[7, 4, 9, 2, 5, 8]
+7
+EXECUTED
+4
+EXECUTED
+9
+2
+5
+EXECUTED
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 181:
+&gt; 947258
+[9, 2, 5, 8, 7, 4]
+[9, 4, 7, 2, 5, 8]
+9
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+2
+5
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 182:
+&gt; 497258
+[9, 2, 5, 8, 7, 4]
+[4, 9, 7, 2, 5, 8]
+4
+EXECUTED
+9
+7
+EXECUTED
+2
+EXECUTED
+5
+8
+Grade: 3 cow(s).
+Turn 183:
+&gt; 794258
+[9, 2, 5, 8, 7, 4]
+[7, 9, 4, 2, 5, 8]
+7
+EXECUTED
+9
+4
+EXECUTED
+2
+EXECUTED
+5
+8
+Grade: 3 cow(s).
+Turn 184:
+&gt; 974258
+[9, 2, 5, 8, 7, 4]
+[9, 7, 4, 2, 5, 8]
+9
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+2
+5
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 185:
+&gt; 274958
+[9, 2, 5, 8, 7, 4]
+[2, 7, 4, 9, 5, 8]
+2
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+9
+5
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 186:
+&gt; 724958
+[9, 2, 5, 8, 7, 4]
+[7, 2, 4, 9, 5, 8]
+7
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+9
+5
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 187:
+&gt; 427958
+[9, 2, 5, 8, 7, 4]
+[4, 2, 7, 9, 5, 8]
+4
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+9
+5
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 188:
+&gt; 247958
+[9, 2, 5, 8, 7, 4]
+[2, 4, 7, 9, 5, 8]
+2
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+9
+5
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 189:
+&gt; 742958
+[9, 2, 5, 8, 7, 4]
+[7, 4, 2, 9, 5, 8]
+7
+EXECUTED
+4
+EXECUTED
+2
+9
+5
+EXECUTED
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 190:
+&gt; 472958
+[9, 2, 5, 8, 7, 4]
+[4, 7, 2, 9, 5, 8]
+4
+EXECUTED
+7
+EXECUTED
+2
+9
+5
+EXECUTED
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 191:
+&gt; 492758
+[9, 2, 5, 8, 7, 4]
+[4, 9, 2, 7, 5, 8]
+4
+EXECUTED
+9
+2
+EXECUTED
+7
+EXECUTED
+5
+8
+Grade: 3 cow(s).
+Turn 192:
+&gt; 942758
+[9, 2, 5, 8, 7, 4]
+[9, 4, 2, 7, 5, 8]
+9
+EXECUTED
+4
+EXECUTED
+2
+7
+EXECUTED
+5
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 193:
+&gt; 249758
+[9, 2, 5, 8, 7, 4]
+[2, 4, 9, 7, 5, 8]
+2
+EXECUTED
+4
+EXECUTED
+9
+7
+EXECUTED
+5
+EXECUTED
+8
+Grade: 4 cow(s).
+Turn 194:
+&gt; 429758
+[9, 2, 5, 8, 7, 4]
+[4, 2, 9, 7, 5, 8]
+4
+EXECUTED
+2
+EXECUTED
+9
+7
+EXECUTED
+5
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 195:
+&gt; 924758
+[9, 2, 5, 8, 7, 4]
+[9, 2, 4, 7, 5, 8]
+9
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+5
+8
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 196:
+&gt; 294758
+[9, 2, 5, 8, 7, 4]
+[2, 9, 4, 7, 5, 8]
+2
+EXECUTED
+9
+4
+EXECUTED
+7
+EXECUTED
+5
+8
+Grade: 3 cow(s).
+Turn 197:
+&gt; 297458
+[9, 2, 5, 8, 7, 4]
+[2, 9, 7, 4, 5, 8]
+2
+EXECUTED
+9
+7
+EXECUTED
+4
+EXECUTED
+5
+8
+Grade: 3 cow(s).
+Turn 198:
+&gt; 927458
+[9, 2, 5, 8, 7, 4]
+[9, 2, 7, 4, 5, 8]
+9
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+5
+8
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 199:
+&gt; 729458
+[9, 2, 5, 8, 7, 4]
+[7, 2, 9, 4, 5, 8]
+7
+EXECUTED
+2
+EXECUTED
+9
+4
+EXECUTED
+5
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 200:
+&gt; 279458
+[9, 2, 5, 8, 7, 4]
+[2, 7, 9, 4, 5, 8]
+2
+EXECUTED
+7
+EXECUTED
+9
+4
+EXECUTED
+5
+EXECUTED
+8
+Grade: 4 cow(s).
+Turn 201:
+&gt; 972458
+[9, 2, 5, 8, 7, 4]
+[9, 7, 2, 4, 5, 8]
+9
+EXECUTED
+7
+EXECUTED
+2
+4
+EXECUTED
+5
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 202:
+&gt; 792458
+[9, 2, 5, 8, 7, 4]
+[7, 9, 2, 4, 5, 8]
+7
+EXECUTED
+9
+2
+EXECUTED
+4
+EXECUTED
+5
+8
+Grade: 3 cow(s).
+Turn 203:
+&gt; 592478
+[9, 2, 5, 8, 7, 4]
+[5, 9, 2, 4, 7, 8]
+5
+EXECUTED
+9
+2
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 204:
+&gt; 952478
+[9, 2, 5, 8, 7, 4]
+[9, 5, 2, 4, 7, 8]
+9
+EXECUTED
+5
+EXECUTED
+2
+4
+EXECUTED
+7
+EXECUTED
+8
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 205:
+&gt; 259478
+[9, 2, 5, 8, 7, 4]
+[2, 5, 9, 4, 7, 8]
+2
+EXECUTED
+5
+EXECUTED
+9
+4
+EXECUTED
+7
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 206:
+&gt; 529478
+[9, 2, 5, 8, 7, 4]
+[5, 2, 9, 4, 7, 8]
+5
+EXECUTED
+2
+EXECUTED
+9
+4
+EXECUTED
+7
+EXECUTED
+8
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 207:
+&gt; 925478
+[9, 2, 5, 8, 7, 4]
+[9, 2, 5, 4, 7, 8]
+9
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+8
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 208:
+&gt; 295478
+[9, 2, 5, 8, 7, 4]
+[2, 9, 5, 4, 7, 8]
+2
+EXECUTED
+9
+5
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+8
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 209:
+&gt; 495278
+[9, 2, 5, 8, 7, 4]
+[4, 9, 5, 2, 7, 8]
+4
+EXECUTED
+9
+5
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+8
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 210:
+&gt; 945278
+[9, 2, 5, 8, 7, 4]
+[9, 4, 5, 2, 7, 8]
+9
+EXECUTED
+4
+EXECUTED
+5
+EXECUTED
+2
+7
+EXECUTED
+8
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 211:
+&gt; 549278
+[9, 2, 5, 8, 7, 4]
+[5, 4, 9, 2, 7, 8]
+5
+EXECUTED
+4
+EXECUTED
+9
+2
+7
+EXECUTED
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 212:
+&gt; 459278
+[9, 2, 5, 8, 7, 4]
+[4, 5, 9, 2, 7, 8]
+4
+EXECUTED
+5
+EXECUTED
+9
+2
+7
+EXECUTED
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 213:
+&gt; 954278
+[9, 2, 5, 8, 7, 4]
+[9, 5, 4, 2, 7, 8]
+9
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+2
+7
+EXECUTED
+8
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 214:
+&gt; 594278
+[9, 2, 5, 8, 7, 4]
+[5, 9, 4, 2, 7, 8]
+5
+EXECUTED
+9
+4
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 215:
+&gt; 524978
+[9, 2, 5, 8, 7, 4]
+[5, 2, 4, 9, 7, 8]
+5
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+9
+7
+EXECUTED
+8
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 216:
+&gt; 254978
+[9, 2, 5, 8, 7, 4]
+[2, 5, 4, 9, 7, 8]
+2
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+9
+7
+EXECUTED
+8
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 217:
+&gt; 452978
+[9, 2, 5, 8, 7, 4]
+[4, 5, 2, 9, 7, 8]
+4
+EXECUTED
+5
+EXECUTED
+2
+9
+7
+EXECUTED
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 218:
+&gt; 542978
+[9, 2, 5, 8, 7, 4]
+[5, 4, 2, 9, 7, 8]
+5
+EXECUTED
+4
+EXECUTED
+2
+9
+7
+EXECUTED
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 219:
+&gt; 245978
+[9, 2, 5, 8, 7, 4]
+[2, 4, 5, 9, 7, 8]
+2
+EXECUTED
+4
+EXECUTED
+5
+EXECUTED
+9
+7
+EXECUTED
+8
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 220:
+&gt; 425978
+[9, 2, 5, 8, 7, 4]
+[4, 2, 5, 9, 7, 8]
+4
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+9
+7
+EXECUTED
+8
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 221:
+&gt; 429578
+[9, 2, 5, 8, 7, 4]
+[4, 2, 9, 5, 7, 8]
+4
+EXECUTED
+2
+EXECUTED
+9
+5
+EXECUTED
+7
+EXECUTED
+8
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 222:
+&gt; 249578
+[9, 2, 5, 8, 7, 4]
+[2, 4, 9, 5, 7, 8]
+2
+EXECUTED
+4
+EXECUTED
+9
+5
+EXECUTED
+7
+EXECUTED
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 223:
+&gt; 942578
+[9, 2, 5, 8, 7, 4]
+[9, 4, 2, 5, 7, 8]
+9
+EXECUTED
+4
+EXECUTED
+2
+5
+EXECUTED
+7
+EXECUTED
+8
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 224:
+&gt; 492578
+[9, 2, 5, 8, 7, 4]
+[4, 9, 2, 5, 7, 8]
+4
+EXECUTED
+9
+2
+EXECUTED
+5
+7
+EXECUTED
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 225:
+&gt; 294578
+[9, 2, 5, 8, 7, 4]
+[2, 9, 4, 5, 7, 8]
+2
+EXECUTED
+9
+4
+EXECUTED
+5
+7
+EXECUTED
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 226:
+&gt; 924578
+[9, 2, 5, 8, 7, 4]
+[9, 2, 4, 5, 7, 8]
+9
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+5
+7
+EXECUTED
+8
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 227:
+&gt; 724598
+[9, 2, 5, 8, 7, 4]
+[7, 2, 4, 5, 9, 8]
+7
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+5
+9
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 228:
+&gt; 274598
+[9, 2, 5, 8, 7, 4]
+[2, 7, 4, 5, 9, 8]
+2
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+5
+9
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 229:
+&gt; 472598
+[9, 2, 5, 8, 7, 4]
+[4, 7, 2, 5, 9, 8]
+4
+EXECUTED
+7
+EXECUTED
+2
+5
+EXECUTED
+9
+8
+Grade: 3 cow(s).
+Turn 230:
+&gt; 742598
+[9, 2, 5, 8, 7, 4]
+[7, 4, 2, 5, 9, 8]
+7
+EXECUTED
+4
+EXECUTED
+2
+5
+EXECUTED
+9
+8
+Grade: 3 cow(s).
+Turn 231:
+&gt; 247598
+[9, 2, 5, 8, 7, 4]
+[2, 4, 7, 5, 9, 8]
+2
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+5
+9
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 232:
+&gt; 427598
+[9, 2, 5, 8, 7, 4]
+[4, 2, 7, 5, 9, 8]
+4
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+5
+9
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 233:
+&gt; 527498
+[9, 2, 5, 8, 7, 4]
+[5, 2, 7, 4, 9, 8]
+5
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+9
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 234:
+&gt; 257498
+[9, 2, 5, 8, 7, 4]
+[2, 5, 7, 4, 9, 8]
+2
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+9
+8
+Grade: 4 cow(s).
+Turn 235:
+&gt; 752498
+[9, 2, 5, 8, 7, 4]
+[7, 5, 2, 4, 9, 8]
+7
+EXECUTED
+5
+EXECUTED
+2
+4
+EXECUTED
+9
+8
+Grade: 3 cow(s).
+Turn 236:
+&gt; 572498
+[9, 2, 5, 8, 7, 4]
+[5, 7, 2, 4, 9, 8]
+5
+EXECUTED
+7
+EXECUTED
+2
+4
+EXECUTED
+9
+8
+Grade: 3 cow(s).
+Turn 237:
+&gt; 275498
+[9, 2, 5, 8, 7, 4]
+[2, 7, 5, 4, 9, 8]
+2
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+9
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 238:
+&gt; 725498
+[9, 2, 5, 8, 7, 4]
+[7, 2, 5, 4, 9, 8]
+7
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+9
+8
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 239:
+&gt; 745298
+[9, 2, 5, 8, 7, 4]
+[7, 4, 5, 2, 9, 8]
+7
+EXECUTED
+4
+EXECUTED
+5
+EXECUTED
+2
+9
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 240:
+&gt; 475298
+[9, 2, 5, 8, 7, 4]
+[4, 7, 5, 2, 9, 8]
+4
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+2
+9
+8
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 241:
+&gt; 574298
+[9, 2, 5, 8, 7, 4]
+[5, 7, 4, 2, 9, 8]
+5
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+2
+9
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 242:
+&gt; 754298
+[9, 2, 5, 8, 7, 4]
+[7, 5, 4, 2, 9, 8]
+7
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+2
+9
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 243:
+&gt; 457298
+[9, 2, 5, 8, 7, 4]
+[4, 5, 7, 2, 9, 8]
+4
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+2
+9
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 244:
+&gt; 547298
+[9, 2, 5, 8, 7, 4]
+[5, 4, 7, 2, 9, 8]
+5
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+2
+9
+8
+EXECUTED
+Grade: 4 cow(s).
+Turn 245:
+&gt; 542798
+[9, 2, 5, 8, 7, 4]
+[5, 4, 2, 7, 9, 8]
+5
+EXECUTED
+4
+EXECUTED
+2
+7
+EXECUTED
+9
+8
+Grade: 3 cow(s).
+Turn 246:
+&gt; 452798
+[9, 2, 5, 8, 7, 4]
+[4, 5, 2, 7, 9, 8]
+4
+EXECUTED
+5
+EXECUTED
+2
+7
+EXECUTED
+9
+8
+Grade: 3 cow(s).
+Turn 247:
+&gt; 254798
+[9, 2, 5, 8, 7, 4]
+[2, 5, 4, 7, 9, 8]
+2
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+9
+8
+Grade: 4 cow(s).
+Turn 248:
+&gt; 524798
+[9, 2, 5, 8, 7, 4]
+[5, 2, 4, 7, 9, 8]
+5
+EXECUTED
+2
+EXECUTED
+4
+EXECUTED
+7
+EXECUTED
+9
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 249:
+&gt; 425798
+[9, 2, 5, 8, 7, 4]
+[4, 2, 5, 7, 9, 8]
+4
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+9
+8
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 250:
+&gt; 245798
+[9, 2, 5, 8, 7, 4]
+[2, 4, 5, 7, 9, 8]
+2
+EXECUTED
+4
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+9
+8
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 251:
+&gt; 285794
+[9, 2, 5, 8, 7, 4]
+[2, 8, 5, 7, 9, 4]
+2
+EXECUTED
+8
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+9
+4
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 252:
+&gt; 825794
+[9, 2, 5, 8, 7, 4]
+[8, 2, 5, 7, 9, 4]
+8
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+9
+4
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 253:
+&gt; 528794
+[9, 2, 5, 8, 7, 4]
+[5, 2, 8, 7, 9, 4]
+5
+EXECUTED
+2
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+9
+4
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 254:
+&gt; 258794
+[9, 2, 5, 8, 7, 4]
+[2, 5, 8, 7, 9, 4]
+2
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+9
+4
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 255:
+&gt; 852794
+[9, 2, 5, 8, 7, 4]
+[8, 5, 2, 7, 9, 4]
+8
+EXECUTED
+5
+EXECUTED
+2
+7
+EXECUTED
+9
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 256:
+&gt; 582794
+[9, 2, 5, 8, 7, 4]
+[5, 8, 2, 7, 9, 4]
+5
+EXECUTED
+8
+EXECUTED
+2
+7
+EXECUTED
+9
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 257:
+&gt; 782594
+[9, 2, 5, 8, 7, 4]
+[7, 8, 2, 5, 9, 4]
+7
+EXECUTED
+8
+EXECUTED
+2
+5
+EXECUTED
+9
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 258:
+&gt; 872594
+[9, 2, 5, 8, 7, 4]
+[8, 7, 2, 5, 9, 4]
+8
+EXECUTED
+7
+EXECUTED
+2
+5
+EXECUTED
+9
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 259:
+&gt; 278594
+[9, 2, 5, 8, 7, 4]
+[2, 7, 8, 5, 9, 4]
+2
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+5
+9
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 260:
+&gt; 728594
+[9, 2, 5, 8, 7, 4]
+[7, 2, 8, 5, 9, 4]
+7
+EXECUTED
+2
+EXECUTED
+8
+EXECUTED
+5
+9
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 261:
+&gt; 827594
+[9, 2, 5, 8, 7, 4]
+[8, 2, 7, 5, 9, 4]
+8
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+5
+9
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 262:
+&gt; 287594
+[9, 2, 5, 8, 7, 4]
+[2, 8, 7, 5, 9, 4]
+2
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+5
+9
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 263:
+&gt; 257894
+[9, 2, 5, 8, 7, 4]
+[2, 5, 7, 8, 9, 4]
+2
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+9
+4
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 264:
+&gt; 527894
+[9, 2, 5, 8, 7, 4]
+[5, 2, 7, 8, 9, 4]
+5
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+9
+4
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 265:
+&gt; 725894
+[9, 2, 5, 8, 7, 4]
+[7, 2, 5, 8, 9, 4]
+7
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+9
+4
+EXECUTED
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 266:
+&gt; 275894
+[9, 2, 5, 8, 7, 4]
+[2, 7, 5, 8, 9, 4]
+2
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+9
+4
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 267:
+&gt; 572894
+[9, 2, 5, 8, 7, 4]
+[5, 7, 2, 8, 9, 4]
+5
+EXECUTED
+7
+EXECUTED
+2
+8
+EXECUTED
+9
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 268:
+&gt; 752894
+[9, 2, 5, 8, 7, 4]
+[7, 5, 2, 8, 9, 4]
+7
+EXECUTED
+5
+EXECUTED
+2
+8
+EXECUTED
+9
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 269:
+&gt; 758294
+[9, 2, 5, 8, 7, 4]
+[7, 5, 8, 2, 9, 4]
+7
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+2
+9
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 270:
+&gt; 578294
+[9, 2, 5, 8, 7, 4]
+[5, 7, 8, 2, 9, 4]
+5
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+2
+9
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 271:
+&gt; 875294
+[9, 2, 5, 8, 7, 4]
+[8, 7, 5, 2, 9, 4]
+8
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+2
+9
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 272:
+&gt; 785294
+[9, 2, 5, 8, 7, 4]
+[7, 8, 5, 2, 9, 4]
+7
+EXECUTED
+8
+EXECUTED
+5
+EXECUTED
+2
+9
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 273:
+&gt; 587294
+[9, 2, 5, 8, 7, 4]
+[5, 8, 7, 2, 9, 4]
+5
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+2
+9
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 274:
+&gt; 857294
+[9, 2, 5, 8, 7, 4]
+[8, 5, 7, 2, 9, 4]
+8
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+2
+9
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 275:
+&gt; 957284
+[9, 2, 5, 8, 7, 4]
+[9, 5, 7, 2, 8, 4]
+9
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+2
+8
+EXECUTED
+4
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 276:
+&gt; 597284
+[9, 2, 5, 8, 7, 4]
+[5, 9, 7, 2, 8, 4]
+5
+EXECUTED
+9
+7
+EXECUTED
+2
+EXECUTED
+8
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 277:
+&gt; 795284
+[9, 2, 5, 8, 7, 4]
+[7, 9, 5, 2, 8, 4]
+7
+EXECUTED
+9
+5
+EXECUTED
+2
+EXECUTED
+8
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 278:
+&gt; 975284
+[9, 2, 5, 8, 7, 4]
+[9, 7, 5, 2, 8, 4]
+9
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+2
+8
+EXECUTED
+4
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 279:
+&gt; 579284
+[9, 2, 5, 8, 7, 4]
+[5, 7, 9, 2, 8, 4]
+5
+EXECUTED
+7
+EXECUTED
+9
+2
+8
+EXECUTED
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 280:
+&gt; 759284
+[9, 2, 5, 8, 7, 4]
+[7, 5, 9, 2, 8, 4]
+7
+EXECUTED
+5
+EXECUTED
+9
+2
+8
+EXECUTED
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 281:
+&gt; 259784
+[9, 2, 5, 8, 7, 4]
+[2, 5, 9, 7, 8, 4]
+2
+EXECUTED
+5
+EXECUTED
+9
+7
+EXECUTED
+8
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 282:
+&gt; 529784
+[9, 2, 5, 8, 7, 4]
+[5, 2, 9, 7, 8, 4]
+5
+EXECUTED
+2
+EXECUTED
+9
+7
+EXECUTED
+8
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 283:
+&gt; 925784
+[9, 2, 5, 8, 7, 4]
+[9, 2, 5, 7, 8, 4]
+9
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+8
+4
+EXECUTED
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 284:
+&gt; 295784
+[9, 2, 5, 8, 7, 4]
+[2, 9, 5, 7, 8, 4]
+2
+EXECUTED
+9
+5
+EXECUTED
+7
+EXECUTED
+8
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 285:
+&gt; 592784
+[9, 2, 5, 8, 7, 4]
+[5, 9, 2, 7, 8, 4]
+5
+EXECUTED
+9
+2
+EXECUTED
+7
+EXECUTED
+8
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 286:
+&gt; 952784
+[9, 2, 5, 8, 7, 4]
+[9, 5, 2, 7, 8, 4]
+9
+EXECUTED
+5
+EXECUTED
+2
+7
+EXECUTED
+8
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 287:
+&gt; 972584
+[9, 2, 5, 8, 7, 4]
+[9, 7, 2, 5, 8, 4]
+9
+EXECUTED
+7
+EXECUTED
+2
+5
+EXECUTED
+8
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 288:
+&gt; 792584
+[9, 2, 5, 8, 7, 4]
+[7, 9, 2, 5, 8, 4]
+7
+EXECUTED
+9
+2
+EXECUTED
+5
+8
+EXECUTED
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 289:
+&gt; 297584
+[9, 2, 5, 8, 7, 4]
+[2, 9, 7, 5, 8, 4]
+2
+EXECUTED
+9
+7
+EXECUTED
+5
+8
+EXECUTED
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 290:
+&gt; 927584
+[9, 2, 5, 8, 7, 4]
+[9, 2, 7, 5, 8, 4]
+9
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+5
+8
+EXECUTED
+4
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 291:
+&gt; 729584
+[9, 2, 5, 8, 7, 4]
+[7, 2, 9, 5, 8, 4]
+7
+EXECUTED
+2
+EXECUTED
+9
+5
+EXECUTED
+8
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 292:
+&gt; 279584
+[9, 2, 5, 8, 7, 4]
+[2, 7, 9, 5, 8, 4]
+2
+EXECUTED
+7
+EXECUTED
+9
+5
+EXECUTED
+8
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 293:
+&gt; 275984
+[9, 2, 5, 8, 7, 4]
+[2, 7, 5, 9, 8, 4]
+2
+EXECUTED
+7
+EXECUTED
+5
+EXECUTED
+9
+8
+EXECUTED
+4
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 294:
+&gt; 725984
+[9, 2, 5, 8, 7, 4]
+[7, 2, 5, 9, 8, 4]
+7
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+9
+8
+EXECUTED
+4
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 295:
+&gt; 527984
+[9, 2, 5, 8, 7, 4]
+[5, 2, 7, 9, 8, 4]
+5
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+9
+8
+EXECUTED
+4
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 296:
+&gt; 257984
+[9, 2, 5, 8, 7, 4]
+[2, 5, 7, 9, 8, 4]
+2
+EXECUTED
+5
+EXECUTED
+7
+EXECUTED
+9
+8
+EXECUTED
+4
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 297:
+&gt; 752984
+[9, 2, 5, 8, 7, 4]
+[7, 5, 2, 9, 8, 4]
+7
+EXECUTED
+5
+EXECUTED
+2
+9
+8
+EXECUTED
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 298:
+&gt; 572984
+[9, 2, 5, 8, 7, 4]
+[5, 7, 2, 9, 8, 4]
+5
+EXECUTED
+7
+EXECUTED
+2
+9
+8
+EXECUTED
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 299:
+&gt; 872954
+[9, 2, 5, 8, 7, 4]
+[8, 7, 2, 9, 5, 4]
+8
+EXECUTED
+7
+EXECUTED
+2
+9
+5
+EXECUTED
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 300:
+&gt; 782954
+[9, 2, 5, 8, 7, 4]
+[7, 8, 2, 9, 5, 4]
+7
+EXECUTED
+8
+EXECUTED
+2
+9
+5
+EXECUTED
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 301:
+&gt; 287954
+[9, 2, 5, 8, 7, 4]
+[2, 8, 7, 9, 5, 4]
+2
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+9
+5
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 302:
+&gt; 827954
+[9, 2, 5, 8, 7, 4]
+[8, 2, 7, 9, 5, 4]
+8
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+9
+5
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 303:
+&gt; 728954
+[9, 2, 5, 8, 7, 4]
+[7, 2, 8, 9, 5, 4]
+7
+EXECUTED
+2
+EXECUTED
+8
+EXECUTED
+9
+5
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 304:
+&gt; 278954
+[9, 2, 5, 8, 7, 4]
+[2, 7, 8, 9, 5, 4]
+2
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+9
+5
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 305:
+&gt; 978254
+[9, 2, 5, 8, 7, 4]
+[9, 7, 8, 2, 5, 4]
+9
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+2
+5
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 306:
+&gt; 798254
+[9, 2, 5, 8, 7, 4]
+[7, 9, 8, 2, 5, 4]
+7
+EXECUTED
+9
+8
+EXECUTED
+2
+EXECUTED
+5
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 307:
+&gt; 897254
+[9, 2, 5, 8, 7, 4]
+[8, 9, 7, 2, 5, 4]
+8
+EXECUTED
+9
+7
+EXECUTED
+2
+EXECUTED
+5
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 308:
+&gt; 987254
+[9, 2, 5, 8, 7, 4]
+[9, 8, 7, 2, 5, 4]
+9
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+2
+5
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 309:
+&gt; 789254
+[9, 2, 5, 8, 7, 4]
+[7, 8, 9, 2, 5, 4]
+7
+EXECUTED
+8
+EXECUTED
+9
+2
+5
+EXECUTED
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 310:
+&gt; 879254
+[9, 2, 5, 8, 7, 4]
+[8, 7, 9, 2, 5, 4]
+8
+EXECUTED
+7
+EXECUTED
+9
+2
+5
+EXECUTED
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 311:
+&gt; 829754
+[9, 2, 5, 8, 7, 4]
+[8, 2, 9, 7, 5, 4]
+8
+EXECUTED
+2
+EXECUTED
+9
+7
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 312:
+&gt; 289754
+[9, 2, 5, 8, 7, 4]
+[2, 8, 9, 7, 5, 4]
+2
+EXECUTED
+8
+EXECUTED
+9
+7
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 313:
+&gt; 982754
+[9, 2, 5, 8, 7, 4]
+[9, 8, 2, 7, 5, 4]
+9
+EXECUTED
+8
+EXECUTED
+2
+7
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 314:
+&gt; 892754
+[9, 2, 5, 8, 7, 4]
+[8, 9, 2, 7, 5, 4]
+8
+EXECUTED
+9
+2
+EXECUTED
+7
+EXECUTED
+5
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 315:
+&gt; 298754
+[9, 2, 5, 8, 7, 4]
+[2, 9, 8, 7, 5, 4]
+2
+EXECUTED
+9
+8
+EXECUTED
+7
+EXECUTED
+5
+4
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 316:
+&gt; 928754
+[9, 2, 5, 8, 7, 4]
+[9, 2, 8, 7, 5, 4]
+9
+EXECUTED
+2
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+5
+4
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 317:
+&gt; 927854
+[9, 2, 5, 8, 7, 4]
+[9, 2, 7, 8, 5, 4]
+9
+EXECUTED
+2
+EXECUTED
+7
+EXECUTED
+8
+EXECUTED
+5
+4
+EXECUTED
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 318:
+&gt; 297854
+[9, 2, 5, 8, 7, 4]
+[2, 9, 7, 8, 5, 4]
+2
+EXECUTED
+9
+7
+EXECUTED
+8
+EXECUTED
+5
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 319:
+&gt; 792854
+[9, 2, 5, 8, 7, 4]
+[7, 9, 2, 8, 5, 4]
+7
+EXECUTED
+9
+2
+EXECUTED
+8
+EXECUTED
+5
+4
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 320:
+&gt; 972854
+[9, 2, 5, 8, 7, 4]
+[9, 7, 2, 8, 5, 4]
+9
+EXECUTED
+7
+EXECUTED
+2
+8
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 321:
+&gt; 279854
+[9, 2, 5, 8, 7, 4]
+[2, 7, 9, 8, 5, 4]
+2
+EXECUTED
+7
+EXECUTED
+9
+8
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 322:
+&gt; 729854
+[9, 2, 5, 8, 7, 4]
+[7, 2, 9, 8, 5, 4]
+7
+EXECUTED
+2
+EXECUTED
+9
+8
+EXECUTED
+5
+EXECUTED
+4
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 323:
+&gt; 529874
+[9, 2, 5, 8, 7, 4]
+[5, 2, 9, 8, 7, 4]
+5
+EXECUTED
+2
+EXECUTED
+9
+8
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 324:
+&gt; 259874
+[9, 2, 5, 8, 7, 4]
+[2, 5, 9, 8, 7, 4]
+2
+EXECUTED
+5
+EXECUTED
+9
+8
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 325:
+&gt; 952874
+[9, 2, 5, 8, 7, 4]
+[9, 5, 2, 8, 7, 4]
+9
+EXECUTED
+5
+EXECUTED
+2
+8
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 326:
+&gt; 592874
+[9, 2, 5, 8, 7, 4]
+[5, 9, 2, 8, 7, 4]
+5
+EXECUTED
+9
+2
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 327:
+&gt; 295874
+[9, 2, 5, 8, 7, 4]
+[2, 9, 5, 8, 7, 4]
+2
+EXECUTED
+9
+5
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 328:
+&gt; 925874
+[9, 2, 5, 8, 7, 4]
+[9, 2, 5, 8, 7, 4]
+9
+EXECUTED
+2
+EXECUTED
+5
+EXECUTED
+8
+EXECUTED
+7
+EXECUTED
+4
+EXECUTED
+Grade: 6 bull(s).
+Congratulations! You guessed the secret code.
+?[1;31m
+Start test 4?[0m
+Input the length of the secret code:
+&gt; 4
+Input the number of possible symbols in the code:
+&gt; 16
+The secret is prepared: **** (0-9, a-f).
+Okay, let's start a game!
+Turn 1:
+&gt; 0000
+[7, a, e, 6]
+[0, 0, 0, 0]
+0
+EXECUTED
+0
+EXECUTED
+0
+EXECUTED
+0
+EXECUTED
+Grade: None.
+Turn 2:
+&gt; 1111
+[7, a, e, 6]
+[1, 1, 1, 1]
+1
+EXECUTED
+1
+EXECUTED
+1
+EXECUTED
+1
+EXECUTED
+Grade: None.
+Turn 3:
+&gt; 2222
+[7, a, e, 6]
+[2, 2, 2, 2]
+2
+EXECUTED
+2
+EXECUTED
+2
+EXECUTED
+2
+EXECUTED
+Grade: None.
+Turn 4:
+&gt; 3333
+[7, a, e, 6]
+[3, 3, 3, 3]
+3
+EXECUTED
+3
+EXECUTED
+3
+EXECUTED
+3
+EXECUTED
+Grade: None.
+Turn 5:
+&gt; 4444
+[7, a, e, 6]
+[4, 4, 4, 4]
+4
+EXECUTED
+4
+EXECUTED
+4
+EXECUTED
+4
+EXECUTED
+Grade: None.
+Turn 6:
+&gt; 5555
+[7, a, e, 6]
+[5, 5, 5, 5]
+5
+EXECUTED
+5
+EXECUTED
+5
+EXECUTED
+5
+EXECUTED
+Grade: None.
+Turn 7:
+&gt; 6666
+[7, a, e, 6]
+[6, 6, 6, 6]
+6
+EXECUTED
+6
+EXECUTED
+6
+EXECUTED
+6
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 8:
+&gt; 7777
+[7, a, e, 6]
+[7, 7, 7, 7]
+7
+EXECUTED
+7
+7
+7
+Grade: 1 bull(s).
+Turn 9:
+&gt; 8888
+[7, a, e, 6]
+[8, 8, 8, 8]
+8
+EXECUTED
+8
+EXECUTED
+8
+EXECUTED
+8
+EXECUTED
 Grade: None.
 Turn 10:
-&gt; 9
+&gt; 9999
+[7, a, e, 6]
+[9, 9, 9, 9]
+9
+EXECUTED
+9
+EXECUTED
+9
+EXECUTED
+9
+EXECUTED
 Grade: None.
 Turn 11:
+&gt; aaaa
+[7, a, e, 6]
+[a, a, a, a]
+a
+EXECUTED
+a
+EXECUTED
+a
+a
+Grade: 1 bull(s) + and 1 cow(s).
+Turn 12:
+&gt; bbbb
+[7, a, e, 6]
+[b, b, b, b]
+b
+EXECUTED
+b
+EXECUTED
+b
+EXECUTED
+b
+EXECUTED
+Grade: None.
+Turn 13:
+&gt; cccc
+[7, a, e, 6]
+[c, c, c, c]
+c
+EXECUTED
+c
+EXECUTED
+c
+EXECUTED
+c
+EXECUTED
+Grade: None.
+Turn 14:
+&gt; dddd
+[7, a, e, 6]
+[d, d, d, d]
+d
+EXECUTED
+d
+EXECUTED
+d
+EXECUTED
+d
+EXECUTED
+Grade: None.
+Turn 15:
+&gt; eeee
+[7, a, e, 6]
+[e, e, e, e]
+e
+EXECUTED
+e
+EXECUTED
+e
+EXECUTED
+e
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 16:
+&gt; 67ae
+[7, a, e, 6]
+[6, 7, a, e]
+6
+EXECUTED
+7
+a
+EXECUTED
+e
+Grade: 2 cow(s).
+Turn 17:
+&gt; 76ae
+[7, a, e, 6]
+[7, 6, a, e]
+7
+EXECUTED
+6
+EXECUTED
+a
+e
+EXECUTED
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 18:
+&gt; a67e
+[7, a, e, 6]
+[a, 6, 7, e]
+a
+EXECUTED
+6
+EXECUTED
+7
+e
+EXECUTED
+Grade: 3 cow(s).
+Turn 19:
+&gt; 6a7e
+[7, a, e, 6]
+[6, a, 7, e]
+6
+EXECUTED
+a
+EXECUTED
+7
+e
+EXECUTED
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 20:
+&gt; 7a6e
+[7, a, e, 6]
+[7, a, 6, e]
+7
+EXECUTED
+a
+EXECUTED
+6
+EXECUTED
+e
+Grade: 2 bull(s) + and 1 cow(s).
+Turn 21:
+&gt; a76e
+[7, a, e, 6]
+[a, 7, 6, e]
+a
+EXECUTED
+7
+6
+EXECUTED
+e
+Grade: 2 cow(s).
+Turn 22:
+&gt; e76a
+[7, a, e, 6]
+[e, 7, 6, a]
+e
+EXECUTED
+7
+6
+EXECUTED
+a
+EXECUTED
+Grade: 3 cow(s).
+Turn 23:
+&gt; 7e6a
+[7, a, e, 6]
+[7, e, 6, a]
+7
+EXECUTED
+e
+EXECUTED
+6
+EXECUTED
+a
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 24:
+&gt; 6e7a
+[7, a, e, 6]
+[6, e, 7, a]
+6
+EXECUTED
+e
+EXECUTED
+7
+a
+Grade: 2 cow(s).
+Turn 25:
+&gt; e67a
+[7, a, e, 6]
+[e, 6, 7, a]
+e
+EXECUTED
+6
+EXECUTED
+7
+a
+Grade: 2 cow(s).
+Turn 26:
+&gt; 76ea
+[7, a, e, 6]
+[7, 6, e, a]
+7
+EXECUTED
+6
+EXECUTED
+e
+EXECUTED
+a
+Grade: 2 bull(s) + and 1 cow(s).
+Turn 27:
+&gt; 67ea
+[7, a, e, 6]
+[6, 7, e, a]
+6
+EXECUTED
+7
+e
+EXECUTED
+a
+EXECUTED
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 28:
+&gt; 6ae7
+[7, a, e, 6]
+[6, a, e, 7]
+6
+EXECUTED
+a
+EXECUTED
+e
+EXECUTED
+7
+Grade: 2 bull(s) + and 1 cow(s).
+Turn 29:
+&gt; a6e7
+[7, a, e, 6]
+[a, 6, e, 7]
+a
+EXECUTED
+6
+EXECUTED
+e
+EXECUTED
+7
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 30:
+&gt; e6a7
+[7, a, e, 6]
+[e, 6, a, 7]
+e
+EXECUTED
+6
+EXECUTED
+a
+7
+Grade: 2 cow(s).
+Turn 31:
+&gt; 6ea7
+[7, a, e, 6]
+[6, e, a, 7]
+6
+EXECUTED
+e
+EXECUTED
+a
+7
+Grade: 2 cow(s).
+Turn 32:
+&gt; ae67
+[7, a, e, 6]
+[a, e, 6, 7]
+a
+EXECUTED
+e
+EXECUTED
+6
+EXECUTED
+7
+Grade: 3 cow(s).
+Turn 33:
+&gt; ea67
+[7, a, e, 6]
+[e, a, 6, 7]
+e
+EXECUTED
+a
+EXECUTED
+6
+EXECUTED
+7
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 34:
+&gt; ea76
+[7, a, e, 6]
+[e, a, 7, 6]
+e
+EXECUTED
+a
+EXECUTED
+7
+6
+EXECUTED
+Grade: 2 bull(s) + and 1 cow(s).
+Turn 35:
+&gt; ae76
+[7, a, e, 6]
+[a, e, 7, 6]
+a
+EXECUTED
+e
+EXECUTED
+7
+6
+EXECUTED
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 36:
+&gt; 7ea6
+[7, a, e, 6]
+[7, e, a, 6]
+7
+EXECUTED
+e
+EXECUTED
+a
+6
+EXECUTED
+Grade: 2 bull(s) + and 1 cow(s).
+Turn 37:
+&gt; e7a6
+[7, a, e, 6]
+[e, 7, a, 6]
+e
+EXECUTED
+7
+a
+EXECUTED
+6
+EXECUTED
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 38:
+&gt; a7e6
+[7, a, e, 6]
+[a, 7, e, 6]
+a
+EXECUTED
+7
+e
+EXECUTED
+6
+EXECUTED
+Grade: 2 bull(s) + and 1 cow(s).
+Turn 39:
+&gt; 7ae6
+[7, a, e, 6]
+[7, a, e, 6]
+7
+EXECUTED
+a
+EXECUTED
+e
+EXECUTED
+6
+EXECUTED
+Grade: 4 bull(s).
+Congratulations! You guessed the secret code.
+?[1;31m
+Start test 5?[0m
+Input the length of the secret code:
+&gt; 6
+Input the number of possible symbols in the code:
+&gt; 36
+The secret is prepared: ****** (0-9, a-z).
+Okay, let's start a game!
+Turn 1:
+&gt; 000000
+[p, 5, k, s, l, j]
+[0, 0, 0, 0, 0, 0]
+0
+EXECUTED
+0
+EXECUTED
+0
+EXECUTED
+0
+EXECUTED
+0
+EXECUTED
+0
+EXECUTED
+Grade: None.
+Turn 2:
+&gt; 111111
+[p, 5, k, s, l, j]
+[1, 1, 1, 1, 1, 1]
+1
+EXECUTED
+1
+EXECUTED
+1
+EXECUTED
+1
+EXECUTED
+1
+EXECUTED
+1
+EXECUTED
+Grade: None.
+Turn 3:
+&gt; 222222
+[p, 5, k, s, l, j]
+[2, 2, 2, 2, 2, 2]
+2
+EXECUTED
+2
+EXECUTED
+2
+EXECUTED
+2
+EXECUTED
+2
+EXECUTED
+2
+EXECUTED
+Grade: None.
+Turn 4:
+&gt; 333333
+[p, 5, k, s, l, j]
+[3, 3, 3, 3, 3, 3]
+3
+EXECUTED
+3
+EXECUTED
+3
+EXECUTED
+3
+EXECUTED
+3
+EXECUTED
+3
+EXECUTED
+Grade: None.
+Turn 5:
+&gt; 444444
+[p, 5, k, s, l, j]
+[4, 4, 4, 4, 4, 4]
+4
+EXECUTED
+4
+EXECUTED
+4
+EXECUTED
+4
+EXECUTED
+4
+EXECUTED
+4
+EXECUTED
+Grade: None.
+Turn 6:
+&gt; 555555
+[p, 5, k, s, l, j]
+[5, 5, 5, 5, 5, 5]
+5
+EXECUTED
+5
+EXECUTED
+5
+5
+5
+5
+Grade: 1 bull(s) + and 1 cow(s).
+Turn 7:
+&gt; 666666
+[p, 5, k, s, l, j]
+[6, 6, 6, 6, 6, 6]
+6
+EXECUTED
+6
+EXECUTED
+6
+EXECUTED
+6
+EXECUTED
+6
+EXECUTED
+6
+EXECUTED
+Grade: None.
+Turn 8:
+&gt; 777777
+[p, 5, k, s, l, j]
+[7, 7, 7, 7, 7, 7]
+7
+EXECUTED
+7
+EXECUTED
+7
+EXECUTED
+7
+EXECUTED
+7
+EXECUTED
+7
+EXECUTED
+Grade: None.
+Turn 9:
+&gt; 888888
+[p, 5, k, s, l, j]
+[8, 8, 8, 8, 8, 8]
+8
+EXECUTED
+8
+EXECUTED
+8
+EXECUTED
+8
+EXECUTED
+8
+EXECUTED
+8
+EXECUTED
+Grade: None.
+Turn 10:
+&gt; 999999
+[p, 5, k, s, l, j]
+[9, 9, 9, 9, 9, 9]
+9
+EXECUTED
+9
+EXECUTED
+9
+EXECUTED
+9
+EXECUTED
+9
+EXECUTED
+9
+EXECUTED
+Grade: None.
+Turn 11:
+&gt; aaaaaa
+[p, 5, k, s, l, j]
+[a, a, a, a, a, a]
+a
+EXECUTED
+a
+EXECUTED
+a
+EXECUTED
+a
+EXECUTED
+a
+EXECUTED
+a
+EXECUTED
+Grade: None.
+Turn 12:
+&gt; bbbbbb
+[p, 5, k, s, l, j]
+[b, b, b, b, b, b]
+b
+EXECUTED
+b
+EXECUTED
+b
+EXECUTED
+b
+EXECUTED
+b
+EXECUTED
+b
+EXECUTED
+Grade: None.
+Turn 13:
+&gt; cccccc
+[p, 5, k, s, l, j]
+[c, c, c, c, c, c]
+c
+EXECUTED
+c
+EXECUTED
+c
+EXECUTED
+c
+EXECUTED
+c
+EXECUTED
+c
+EXECUTED
+Grade: None.
+Turn 14:
+&gt; dddddd
+[p, 5, k, s, l, j]
+[d, d, d, d, d, d]
+d
+EXECUTED
+d
+EXECUTED
+d
+EXECUTED
+d
+EXECUTED
+d
+EXECUTED
+d
+EXECUTED
+Grade: None.
+Turn 15:
+&gt; eeeeee
+[p, 5, k, s, l, j]
+[e, e, e, e, e, e]
+e
+EXECUTED
+e
+EXECUTED
+e
+EXECUTED
+e
+EXECUTED
+e
+EXECUTED
+e
+EXECUTED
+Grade: None.
+Turn 16:
+&gt; ffffff
+[p, 5, k, s, l, j]
+[f, f, f, f, f, f]
+f
+EXECUTED
+f
+EXECUTED
+f
+EXECUTED
+f
+EXECUTED
+f
+EXECUTED
+f
+EXECUTED
+Grade: None.
+Turn 17:
+&gt; gggggg
+[p, 5, k, s, l, j]
+[g, g, g, g, g, g]
+g
+EXECUTED
+g
+EXECUTED
+g
+EXECUTED
+g
+EXECUTED
+g
+EXECUTED
+g
+EXECUTED
+Grade: None.
+Turn 18:
+&gt; hhhhhh
+[p, 5, k, s, l, j]
+[h, h, h, h, h, h]
+h
+EXECUTED
+h
+EXECUTED
+h
+EXECUTED
+h
+EXECUTED
+h
+EXECUTED
+h
+EXECUTED
+Grade: None.
+Turn 19:
+&gt; iiiiii
+[p, 5, k, s, l, j]
+[i, i, i, i, i, i]
+i
+EXECUTED
+i
+EXECUTED
+i
+EXECUTED
+i
+EXECUTED
+i
+EXECUTED
+i
+EXECUTED
+Grade: None.
+Turn 20:
+&gt; jjjjjj
+[p, 5, k, s, l, j]
+[j, j, j, j, j, j]
+j
+EXECUTED
+j
+EXECUTED
+j
+EXECUTED
+j
+EXECUTED
+j
+EXECUTED
+j
+EXECUTED
+Grade: 1 bull(s) + and 5 cow(s).
+Turn 21:
+&gt; kkkkkk
+[p, 5, k, s, l, j]
+[k, k, k, k, k, k]
+k
+EXECUTED
+k
+EXECUTED
+k
+EXECUTED
+k
+k
+k
+Grade: 1 bull(s) + and 2 cow(s).
+Turn 22:
+&gt; llllll
+[p, 5, k, s, l, j]
+[l, l, l, l, l, l]
+l
+EXECUTED
+l
+EXECUTED
+l
+EXECUTED
+l
+EXECUTED
+l
+EXECUTED
+l
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 23:
+&gt; mmmmmm
+[p, 5, k, s, l, j]
+[m, m, m, m, m, m]
+m
+EXECUTED
+m
+EXECUTED
+m
+EXECUTED
+m
+EXECUTED
+m
+EXECUTED
+m
+EXECUTED
+Grade: None.
+Turn 24:
+&gt; nnnnnn
+[p, 5, k, s, l, j]
+[n, n, n, n, n, n]
+n
+EXECUTED
+n
+EXECUTED
+n
+EXECUTED
+n
+EXECUTED
+n
+EXECUTED
+n
+EXECUTED
+Grade: None.
+Turn 25:
+&gt; oooooo
+[p, 5, k, s, l, j]
+[o, o, o, o, o, o]
+o
+EXECUTED
+o
+EXECUTED
+o
+EXECUTED
+o
+EXECUTED
+o
+EXECUTED
+o
+EXECUTED
+Grade: None.
+Turn 26:
+&gt; pppppp
+[p, 5, k, s, l, j]
+[p, p, p, p, p, p]
+p
+EXECUTED
+p
+p
+p
+p
+p
+Grade: 1 bull(s).
+Turn 27:
+&gt; qqqqqq
+[p, 5, k, s, l, j]
+[q, q, q, q, q, q]
+q
+EXECUTED
+q
+EXECUTED
+q
+EXECUTED
+q
+EXECUTED
+q
+EXECUTED
+q
+EXECUTED
+Grade: None.
+Turn 28:
+&gt; rrrrrr
+[p, 5, k, s, l, j]
+[r, r, r, r, r, r]
+r
+EXECUTED
+r
+EXECUTED
+r
+EXECUTED
+r
+EXECUTED
+r
+EXECUTED
+r
+EXECUTED
+Grade: None.
+Turn 29:
+&gt; ssssss
+[p, 5, k, s, l, j]
+[s, s, s, s, s, s]
+s
+EXECUTED
+s
+EXECUTED
+s
+EXECUTED
+s
+EXECUTED
+s
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 30:
+&gt; 5jklps
+[p, 5, k, s, l, j]
+[5, j, k, l, p, s]
+5
+EXECUTED
+j
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+p
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 31:
+&gt; j5klps
+[p, 5, k, s, l, j]
+[j, 5, k, l, p, s]
+j
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+p
+s
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 32:
+&gt; k5jlps
+[p, 5, k, s, l, j]
+[k, 5, j, l, p, s]
+k
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+p
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 33:
+&gt; 5kjlps
+[p, 5, k, s, l, j]
+[5, k, j, l, p, s]
+5
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+p
+s
+Grade: 4 cow(s).
+Turn 34:
+&gt; jk5lps
+[p, 5, k, s, l, j]
+[j, k, 5, l, p, s]
+j
+EXECUTED
+k
+EXECUTED
+5
+l
+EXECUTED
+p
+s
+Grade: 3 cow(s).
+Turn 35:
+&gt; kj5lps
+[p, 5, k, s, l, j]
+[k, j, 5, l, p, s]
+k
+EXECUTED
+j
+EXECUTED
+5
+l
+EXECUTED
+p
+s
+Grade: 3 cow(s).
+Turn 36:
+&gt; lj5kps
+[p, 5, k, s, l, j]
+[l, j, 5, k, p, s]
+l
+EXECUTED
+j
+EXECUTED
+5
+k
+EXECUTED
+p
+s
+Grade: 3 cow(s).
+Turn 37:
+&gt; jl5kps
+[p, 5, k, s, l, j]
+[j, l, 5, k, p, s]
+j
+EXECUTED
+l
+EXECUTED
+5
+k
+EXECUTED
+p
+s
+Grade: 3 cow(s).
+Turn 38:
+&gt; 5ljkps
+[p, 5, k, s, l, j]
+[5, l, j, k, p, s]
+5
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+k
+p
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 39:
+&gt; l5jkps
+[p, 5, k, s, l, j]
+[l, 5, j, k, p, s]
+l
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+k
+p
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 40:
+&gt; j5lkps
+[p, 5, k, s, l, j]
+[j, 5, l, k, p, s]
+j
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+k
+p
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 41:
+&gt; 5jlkps
+[p, 5, k, s, l, j]
+[5, j, l, k, p, s]
+5
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+k
+p
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 42:
+&gt; 5kljps
+[p, 5, k, s, l, j]
+[5, k, l, j, p, s]
+5
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+p
+s
+Grade: 4 cow(s).
+Turn 43:
+&gt; k5ljps
+[p, 5, k, s, l, j]
+[k, 5, l, j, p, s]
+k
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+p
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 44:
+&gt; l5kjps
+[p, 5, k, s, l, j]
+[l, 5, k, j, p, s]
+l
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+p
+s
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 45:
+&gt; 5lkjps
+[p, 5, k, s, l, j]
+[5, l, k, j, p, s]
+5
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+p
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 46:
+&gt; kl5jps
+[p, 5, k, s, l, j]
+[k, l, 5, j, p, s]
+k
+EXECUTED
+l
+EXECUTED
+5
+j
+EXECUTED
+p
+s
+Grade: 3 cow(s).
+Turn 47:
+&gt; lk5jps
+[p, 5, k, s, l, j]
+[l, k, 5, j, p, s]
+l
+EXECUTED
+k
+EXECUTED
+5
+j
+EXECUTED
+p
+s
+Grade: 3 cow(s).
+Turn 48:
+&gt; lkj5ps
+[p, 5, k, s, l, j]
+[l, k, j, 5, p, s]
+l
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+5
+p
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 49:
+&gt; klj5ps
+[p, 5, k, s, l, j]
+[k, l, j, 5, p, s]
+k
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+5
+p
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 50:
+&gt; jlk5ps
+[p, 5, k, s, l, j]
+[j, l, k, 5, p, s]
+j
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+5
+p
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 51:
+&gt; ljk5ps
+[p, 5, k, s, l, j]
+[l, j, k, 5, p, s]
+l
+EXECUTED
+j
+EXECUTED
+k
+EXECUTED
+5
+p
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 52:
+&gt; kjl5ps
+[p, 5, k, s, l, j]
+[k, j, l, 5, p, s]
+k
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+5
+p
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 53:
+&gt; jkl5ps
+[p, 5, k, s, l, j]
+[j, k, l, 5, p, s]
+j
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+5
+p
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 54:
+&gt; pkl5js
+[p, 5, k, s, l, j]
+[p, k, l, 5, j, s]
+p
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+5
+j
+EXECUTED
+s
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 55:
+&gt; kpl5js
+[p, 5, k, s, l, j]
+[k, p, l, 5, j, s]
+k
+EXECUTED
+p
+l
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+s
+Grade: 4 cow(s).
+Turn 56:
+&gt; lpk5js
+[p, 5, k, s, l, j]
+[l, p, k, 5, j, s]
+l
+EXECUTED
+p
+k
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 57:
+&gt; plk5js
+[p, 5, k, s, l, j]
+[p, l, k, 5, j, s]
+p
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+5
+j
+EXECUTED
+s
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 58:
+&gt; klp5js
+[p, 5, k, s, l, j]
+[k, l, p, 5, j, s]
+k
+EXECUTED
+l
+EXECUTED
+p
+5
+j
+EXECUTED
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 59:
+&gt; lkp5js
+[p, 5, k, s, l, j]
+[l, k, p, 5, j, s]
+l
+EXECUTED
+k
+EXECUTED
+p
+5
+j
+EXECUTED
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 60:
+&gt; 5kpljs
+[p, 5, k, s, l, j]
+[5, k, p, l, j, s]
+5
+EXECUTED
+k
+EXECUTED
+p
+l
+EXECUTED
+j
+EXECUTED
+s
+Grade: 4 cow(s).
+Turn 61:
+&gt; k5pljs
+[p, 5, k, s, l, j]
+[k, 5, p, l, j, s]
+k
+EXECUTED
+5
+EXECUTED
+p
+l
+EXECUTED
+j
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 62:
+&gt; p5kljs
+[p, 5, k, s, l, j]
+[p, 5, k, l, j, s]
+p
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+s
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 63:
+&gt; 5pkljs
+[p, 5, k, s, l, j]
+[5, p, k, l, j, s]
+5
+EXECUTED
+p
+k
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 64:
+&gt; kp5ljs
+[p, 5, k, s, l, j]
+[k, p, 5, l, j, s]
+k
+EXECUTED
+p
+5
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+s
+Grade: 4 cow(s).
+Turn 65:
+&gt; pk5ljs
+[p, 5, k, s, l, j]
+[p, k, 5, l, j, s]
+p
+EXECUTED
+k
+EXECUTED
+5
+l
+EXECUTED
+j
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 66:
+&gt; pl5kjs
+[p, 5, k, s, l, j]
+[p, l, 5, k, j, s]
+p
+EXECUTED
+l
+EXECUTED
+5
+k
+EXECUTED
+j
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 67:
+&gt; lp5kjs
+[p, 5, k, s, l, j]
+[l, p, 5, k, j, s]
+l
+EXECUTED
+p
+5
+EXECUTED
+k
+j
+EXECUTED
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 68:
+&gt; 5plkjs
+[p, 5, k, s, l, j]
+[5, p, l, k, j, s]
+5
+EXECUTED
+p
+l
+EXECUTED
+k
+j
+EXECUTED
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 69:
+&gt; p5lkjs
+[p, 5, k, s, l, j]
+[p, 5, l, k, j, s]
+p
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+k
+j
+EXECUTED
+s
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 70:
+&gt; l5pkjs
+[p, 5, k, s, l, j]
+[l, 5, p, k, j, s]
+l
+EXECUTED
+5
+EXECUTED
+p
+k
+EXECUTED
+j
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 71:
+&gt; 5lpkjs
+[p, 5, k, s, l, j]
+[5, l, p, k, j, s]
+5
+EXECUTED
+l
+EXECUTED
+p
+k
+EXECUTED
+j
+EXECUTED
+s
+Grade: 4 cow(s).
+Turn 72:
+&gt; 5lkpjs
+[p, 5, k, s, l, j]
+[5, l, k, p, j, s]
+5
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+p
+j
+EXECUTED
+s
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 73:
+&gt; l5kpjs
+[p, 5, k, s, l, j]
+[l, 5, k, p, j, s]
+l
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+p
+j
+EXECUTED
+s
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 74:
+&gt; k5lpjs
+[p, 5, k, s, l, j]
+[k, 5, l, p, j, s]
+k
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+p
+j
+EXECUTED
+s
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 75:
+&gt; 5klpjs
+[p, 5, k, s, l, j]
+[5, k, l, p, j, s]
+5
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+p
+j
+EXECUTED
+s
+EXECUTED
+Grade: 5 cow(s).
+Turn 76:
+&gt; lk5pjs
+[p, 5, k, s, l, j]
+[l, k, 5, p, j, s]
+l
+EXECUTED
+k
+EXECUTED
+5
+p
+j
+EXECUTED
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 77:
+&gt; kl5pjs
+[p, 5, k, s, l, j]
+[k, l, 5, p, j, s]
+k
+EXECUTED
+l
+EXECUTED
+5
+p
+j
+EXECUTED
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 78:
+&gt; jl5pks
+[p, 5, k, s, l, j]
+[j, l, 5, p, k, s]
+j
+EXECUTED
+l
+EXECUTED
+5
+p
+k
+EXECUTED
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 79:
+&gt; lj5pks
+[p, 5, k, s, l, j]
+[l, j, 5, p, k, s]
+l
+EXECUTED
+j
+EXECUTED
+5
+p
+k
+EXECUTED
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 80:
+&gt; 5jlpks
+[p, 5, k, s, l, j]
+[5, j, l, p, k, s]
+5
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+p
+k
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 81:
+&gt; j5lpks
+[p, 5, k, s, l, j]
+[j, 5, l, p, k, s]
+j
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+p
+k
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 82:
+&gt; l5jpks
+[p, 5, k, s, l, j]
+[l, 5, j, p, k, s]
+l
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+p
+k
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 83:
+&gt; 5ljpks
+[p, 5, k, s, l, j]
+[5, l, j, p, k, s]
+5
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+p
+k
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 84:
+&gt; plj5ks
+[p, 5, k, s, l, j]
+[p, l, j, 5, k, s]
+p
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+5
+k
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 85:
+&gt; lpj5ks
+[p, 5, k, s, l, j]
+[l, p, j, 5, k, s]
+l
+EXECUTED
+p
+j
+EXECUTED
+5
+EXECUTED
+k
+s
+Grade: 3 cow(s).
+Turn 86:
+&gt; jpl5ks
+[p, 5, k, s, l, j]
+[j, p, l, 5, k, s]
+j
+EXECUTED
+p
+l
+EXECUTED
+5
+EXECUTED
+k
+s
+Grade: 3 cow(s).
+Turn 87:
+&gt; pjl5ks
+[p, 5, k, s, l, j]
+[p, j, l, 5, k, s]
+p
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+5
+k
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 88:
+&gt; ljp5ks
+[p, 5, k, s, l, j]
+[l, j, p, 5, k, s]
+l
+EXECUTED
+j
+EXECUTED
+p
+5
+k
+EXECUTED
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 89:
+&gt; jlp5ks
+[p, 5, k, s, l, j]
+[j, l, p, 5, k, s]
+j
+EXECUTED
+l
+EXECUTED
+p
+5
+k
+EXECUTED
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 90:
+&gt; j5plks
+[p, 5, k, s, l, j]
+[j, 5, p, l, k, s]
+j
+EXECUTED
+5
+EXECUTED
+p
+l
+EXECUTED
+k
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 91:
+&gt; 5jplks
+[p, 5, k, s, l, j]
+[5, j, p, l, k, s]
+5
+EXECUTED
+j
+EXECUTED
+p
+l
+EXECUTED
+k
+EXECUTED
+s
+Grade: 4 cow(s).
+Turn 92:
+&gt; pj5lks
+[p, 5, k, s, l, j]
+[p, j, 5, l, k, s]
+p
+EXECUTED
+j
+EXECUTED
+5
+l
+EXECUTED
+k
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 93:
+&gt; jp5lks
+[p, 5, k, s, l, j]
+[j, p, 5, l, k, s]
+j
+EXECUTED
+p
+5
+EXECUTED
+l
+EXECUTED
+k
+s
+Grade: 3 cow(s).
+Turn 94:
+&gt; 5pjlks
+[p, 5, k, s, l, j]
+[5, p, j, l, k, s]
+5
+EXECUTED
+p
+j
+EXECUTED
+l
+EXECUTED
+k
+s
+Grade: 3 cow(s).
+Turn 95:
+&gt; p5jlks
+[p, 5, k, s, l, j]
+[p, 5, j, l, k, s]
+p
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+k
+s
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 96:
+&gt; p5ljks
+[p, 5, k, s, l, j]
+[p, 5, l, j, k, s]
+p
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+k
+s
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 97:
+&gt; 5pljks
+[p, 5, k, s, l, j]
+[5, p, l, j, k, s]
+5
+EXECUTED
+p
+l
+EXECUTED
+j
+EXECUTED
+k
+s
+Grade: 3 cow(s).
+Turn 98:
+&gt; lp5jks
+[p, 5, k, s, l, j]
+[l, p, 5, j, k, s]
+l
+EXECUTED
+p
+5
+EXECUTED
+j
+EXECUTED
+k
+s
+Grade: 3 cow(s).
+Turn 99:
+&gt; pl5jks
+[p, 5, k, s, l, j]
+[p, l, 5, j, k, s]
+p
+EXECUTED
+l
+EXECUTED
+5
+j
+EXECUTED
+k
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 100:
+&gt; 5lpjks
+[p, 5, k, s, l, j]
+[5, l, p, j, k, s]
+5
+EXECUTED
+l
+EXECUTED
+p
+j
+EXECUTED
+k
+EXECUTED
+s
+Grade: 4 cow(s).
+Turn 101:
+&gt; l5pjks
+[p, 5, k, s, l, j]
+[l, 5, p, j, k, s]
+l
+EXECUTED
+5
+EXECUTED
+p
+j
+EXECUTED
+k
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 102:
+&gt; k5pjls
+[p, 5, k, s, l, j]
+[k, 5, p, j, l, s]
+k
+EXECUTED
+5
+EXECUTED
+p
+j
+EXECUTED
+l
+EXECUTED
+s
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 103:
+&gt; 5kpjls
+[p, 5, k, s, l, j]
+[5, k, p, j, l, s]
+5
+EXECUTED
+k
+EXECUTED
+p
+j
+EXECUTED
+l
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 104:
+&gt; pk5jls
+[p, 5, k, s, l, j]
+[p, k, 5, j, l, s]
+p
+EXECUTED
+k
+EXECUTED
+5
+j
+EXECUTED
+l
+EXECUTED
+s
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 105:
+&gt; kp5jls
+[p, 5, k, s, l, j]
+[k, p, 5, j, l, s]
+k
+EXECUTED
+p
+5
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 106:
+&gt; 5pkjls
+[p, 5, k, s, l, j]
+[5, p, k, j, l, s]
+5
+EXECUTED
+p
+k
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+s
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 107:
+&gt; p5kjls
+[p, 5, k, s, l, j]
+[p, 5, k, j, l, s]
+p
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+s
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 108:
+&gt; j5kpls
+[p, 5, k, s, l, j]
+[j, 5, k, p, l, s]
+j
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+p
+l
+EXECUTED
+s
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 109:
+&gt; 5jkpls
+[p, 5, k, s, l, j]
+[5, j, k, p, l, s]
+5
+EXECUTED
+j
+EXECUTED
+k
+EXECUTED
+p
+l
+EXECUTED
+s
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 110:
+&gt; kj5pls
+[p, 5, k, s, l, j]
+[k, j, 5, p, l, s]
+k
+EXECUTED
+j
+EXECUTED
+5
+p
+l
+EXECUTED
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 111:
+&gt; jk5pls
+[p, 5, k, s, l, j]
+[j, k, 5, p, l, s]
+j
+EXECUTED
+k
+EXECUTED
+5
+p
+l
+EXECUTED
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 112:
+&gt; 5kjpls
+[p, 5, k, s, l, j]
+[5, k, j, p, l, s]
+5
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+p
+l
+EXECUTED
+s
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 113:
+&gt; k5jpls
+[p, 5, k, s, l, j]
+[k, 5, j, p, l, s]
+k
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+p
+l
+EXECUTED
+s
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 114:
+&gt; kpj5ls
+[p, 5, k, s, l, j]
+[k, p, j, 5, l, s]
+k
+EXECUTED
+p
+j
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 115:
+&gt; pkj5ls
+[p, 5, k, s, l, j]
+[p, k, j, 5, l, s]
+p
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+5
+l
+EXECUTED
+s
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 116:
+&gt; jkp5ls
+[p, 5, k, s, l, j]
+[j, k, p, 5, l, s]
+j
+EXECUTED
+k
+EXECUTED
+p
+5
+l
+EXECUTED
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 117:
+&gt; kjp5ls
+[p, 5, k, s, l, j]
+[k, j, p, 5, l, s]
+k
+EXECUTED
+j
+EXECUTED
+p
+5
+l
+EXECUTED
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 118:
+&gt; pjk5ls
+[p, 5, k, s, l, j]
+[p, j, k, 5, l, s]
+p
+EXECUTED
+j
+EXECUTED
+k
+EXECUTED
+5
+l
+EXECUTED
+s
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 119:
+&gt; jpk5ls
+[p, 5, k, s, l, j]
+[j, p, k, 5, l, s]
+j
+EXECUTED
+p
+k
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+s
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 120:
+&gt; jp5kls
+[p, 5, k, s, l, j]
+[j, p, 5, k, l, s]
+j
+EXECUTED
+p
+5
+EXECUTED
+k
+l
+EXECUTED
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 121:
+&gt; pj5kls
+[p, 5, k, s, l, j]
+[p, j, 5, k, l, s]
+p
+EXECUTED
+j
+EXECUTED
+5
+k
+EXECUTED
+l
+EXECUTED
+s
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 122:
+&gt; 5jpkls
+[p, 5, k, s, l, j]
+[5, j, p, k, l, s]
+5
+EXECUTED
+j
+EXECUTED
+p
+k
+EXECUTED
+l
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 123:
+&gt; j5pkls
+[p, 5, k, s, l, j]
+[j, 5, p, k, l, s]
+j
+EXECUTED
+5
+EXECUTED
+p
+k
+EXECUTED
+l
+EXECUTED
+s
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 124:
+&gt; p5jkls
+[p, 5, k, s, l, j]
+[p, 5, j, k, l, s]
+p
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+k
+l
+EXECUTED
+s
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 125:
+&gt; 5pjkls
+[p, 5, k, s, l, j]
+[5, p, j, k, l, s]
+5
+EXECUTED
+p
+j
+EXECUTED
+k
+l
+EXECUTED
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 126:
+&gt; lpjk5s
+[p, 5, k, s, l, j]
+[l, p, j, k, 5, s]
+l
+EXECUTED
+p
+j
+EXECUTED
+k
+5
+EXECUTED
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 127:
+&gt; pljk5s
+[p, 5, k, s, l, j]
+[p, l, j, k, 5, s]
+p
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+k
+5
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 128:
+&gt; jlpk5s
+[p, 5, k, s, l, j]
+[j, l, p, k, 5, s]
+j
+EXECUTED
+l
+EXECUTED
+p
+k
+EXECUTED
+5
+s
+Grade: 3 cow(s).
+Turn 129:
+&gt; ljpk5s
+[p, 5, k, s, l, j]
+[l, j, p, k, 5, s]
+l
+EXECUTED
+j
+EXECUTED
+p
+k
+EXECUTED
+5
+s
+Grade: 3 cow(s).
+Turn 130:
+&gt; pjlk5s
+[p, 5, k, s, l, j]
+[p, j, l, k, 5, s]
+p
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+k
+5
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 131:
+&gt; jplk5s
+[p, 5, k, s, l, j]
+[j, p, l, k, 5, s]
+j
+EXECUTED
+p
+l
+EXECUTED
+k
+5
+EXECUTED
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 132:
+&gt; kplj5s
+[p, 5, k, s, l, j]
+[k, p, l, j, 5, s]
+k
+EXECUTED
+p
+l
+EXECUTED
+j
+EXECUTED
+5
+EXECUTED
+s
+Grade: 4 cow(s).
+Turn 133:
+&gt; pklj5s
+[p, 5, k, s, l, j]
+[p, k, l, j, 5, s]
+p
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+5
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 134:
+&gt; lkpj5s
+[p, 5, k, s, l, j]
+[l, k, p, j, 5, s]
+l
+EXECUTED
+k
+EXECUTED
+p
+j
+EXECUTED
+5
+s
+Grade: 3 cow(s).
+Turn 135:
+&gt; klpj5s
+[p, 5, k, s, l, j]
+[k, l, p, j, 5, s]
+k
+EXECUTED
+l
+EXECUTED
+p
+j
+EXECUTED
+5
+s
+Grade: 3 cow(s).
+Turn 136:
+&gt; plkj5s
+[p, 5, k, s, l, j]
+[p, l, k, j, 5, s]
+p
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+5
+s
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 137:
+&gt; lpkj5s
+[p, 5, k, s, l, j]
+[l, p, k, j, 5, s]
+l
+EXECUTED
+p
+k
+EXECUTED
+j
+EXECUTED
+5
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 138:
+&gt; ljkp5s
+[p, 5, k, s, l, j]
+[l, j, k, p, 5, s]
+l
+EXECUTED
+j
+EXECUTED
+k
+EXECUTED
+p
+5
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 139:
+&gt; jlkp5s
+[p, 5, k, s, l, j]
+[j, l, k, p, 5, s]
+j
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+p
+5
+s
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 140:
+&gt; kljp5s
+[p, 5, k, s, l, j]
+[k, l, j, p, 5, s]
+k
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+p
+5
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 141:
+&gt; lkjp5s
+[p, 5, k, s, l, j]
+[l, k, j, p, 5, s]
+l
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+p
+5
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 142:
+&gt; jklp5s
+[p, 5, k, s, l, j]
+[j, k, l, p, 5, s]
+j
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+p
+5
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 143:
+&gt; kjlp5s
+[p, 5, k, s, l, j]
+[k, j, l, p, 5, s]
+k
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+p
+5
+s
+EXECUTED
+Grade: 4 cow(s).
+Turn 144:
+&gt; kjpl5s
+[p, 5, k, s, l, j]
+[k, j, p, l, 5, s]
+k
+EXECUTED
+j
+EXECUTED
+p
+l
+EXECUTED
+5
+s
+Grade: 3 cow(s).
+Turn 145:
+&gt; jkpl5s
+[p, 5, k, s, l, j]
+[j, k, p, l, 5, s]
+j
+EXECUTED
+k
+EXECUTED
+p
+l
+EXECUTED
+5
+s
+Grade: 3 cow(s).
+Turn 146:
+&gt; pkjl5s
+[p, 5, k, s, l, j]
+[p, k, j, l, 5, s]
+p
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+5
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 147:
+&gt; kpjl5s
+[p, 5, k, s, l, j]
+[k, p, j, l, 5, s]
+k
+EXECUTED
+p
+j
+EXECUTED
+l
+EXECUTED
+5
+EXECUTED
+s
+Grade: 4 cow(s).
+Turn 148:
+&gt; jpkl5s
+[p, 5, k, s, l, j]
+[j, p, k, l, 5, s]
+j
+EXECUTED
+p
+k
+EXECUTED
+l
+EXECUTED
+5
+EXECUTED
+s
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 149:
+&gt; pjkl5s
+[p, 5, k, s, l, j]
+[p, j, k, l, 5, s]
+p
+EXECUTED
+j
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+5
+s
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 150:
+&gt; sjkl5p
+[p, 5, k, s, l, j]
+[s, j, k, l, 5, p]
+s
+EXECUTED
+j
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+5
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 151:
+&gt; jskl5p
+[p, 5, k, s, l, j]
+[j, s, k, l, 5, p]
+j
+EXECUTED
+s
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+5
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 152:
+&gt; ksjl5p
+[p, 5, k, s, l, j]
+[k, s, j, l, 5, p]
+k
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+5
+p
+Grade: 4 cow(s).
+Turn 153:
+&gt; skjl5p
+[p, 5, k, s, l, j]
+[s, k, j, l, 5, p]
+s
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+5
+p
+Grade: 4 cow(s).
+Turn 154:
+&gt; jksl5p
+[p, 5, k, s, l, j]
+[j, k, s, l, 5, p]
+j
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+5
+p
+Grade: 4 cow(s).
+Turn 155:
+&gt; kjsl5p
+[p, 5, k, s, l, j]
+[k, j, s, l, 5, p]
+k
+EXECUTED
+j
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+5
+p
+Grade: 4 cow(s).
+Turn 156:
+&gt; ljsk5p
+[p, 5, k, s, l, j]
+[l, j, s, k, 5, p]
+l
+EXECUTED
+j
+EXECUTED
+s
+EXECUTED
+k
+5
+p
+Grade: 3 cow(s).
+Turn 157:
+&gt; jlsk5p
+[p, 5, k, s, l, j]
+[j, l, s, k, 5, p]
+j
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+k
+5
+p
+Grade: 3 cow(s).
+Turn 158:
+&gt; sljk5p
+[p, 5, k, s, l, j]
+[s, l, j, k, 5, p]
+s
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+k
+5
+p
+Grade: 3 cow(s).
+Turn 159:
+&gt; lsjk5p
+[p, 5, k, s, l, j]
+[l, s, j, k, 5, p]
+l
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+k
+5
+p
+Grade: 3 cow(s).
+Turn 160:
+&gt; jslk5p
+[p, 5, k, s, l, j]
+[j, s, l, k, 5, p]
+j
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+k
+5
+p
+Grade: 3 cow(s).
+Turn 161:
+&gt; sjlk5p
+[p, 5, k, s, l, j]
+[s, j, l, k, 5, p]
+s
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+k
+5
+p
+Grade: 3 cow(s).
+Turn 162:
+&gt; sklj5p
+[p, 5, k, s, l, j]
+[s, k, l, j, 5, p]
+s
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+5
+p
+Grade: 4 cow(s).
+Turn 163:
+&gt; kslj5p
+[p, 5, k, s, l, j]
+[k, s, l, j, 5, p]
+k
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+5
+p
+Grade: 4 cow(s).
+Turn 164:
+&gt; lskj5p
+[p, 5, k, s, l, j]
+[l, s, k, j, 5, p]
+l
+EXECUTED
+s
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+5
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 165:
+&gt; slkj5p
+[p, 5, k, s, l, j]
+[s, l, k, j, 5, p]
+s
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+5
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 166:
+&gt; klsj5p
+[p, 5, k, s, l, j]
+[k, l, s, j, 5, p]
+k
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+5
+p
+Grade: 4 cow(s).
+Turn 167:
+&gt; lksj5p
+[p, 5, k, s, l, j]
+[l, k, s, j, 5, p]
+l
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+5
+p
+Grade: 4 cow(s).
+Turn 168:
+&gt; lkjs5p
+[p, 5, k, s, l, j]
+[l, k, j, s, 5, p]
+l
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+s
+EXECUTED
+5
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 169:
+&gt; kljs5p
+[p, 5, k, s, l, j]
+[k, l, j, s, 5, p]
+k
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+s
+EXECUTED
+5
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 170:
+&gt; jlks5p
+[p, 5, k, s, l, j]
+[j, l, k, s, 5, p]
+j
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+5
+p
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 171:
+&gt; ljks5p
+[p, 5, k, s, l, j]
+[l, j, k, s, 5, p]
+l
+EXECUTED
+j
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+5
+p
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 172:
+&gt; kjls5p
+[p, 5, k, s, l, j]
+[k, j, l, s, 5, p]
+k
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+5
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 173:
+&gt; jkls5p
+[p, 5, k, s, l, j]
+[j, k, l, s, 5, p]
+j
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+5
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 174:
+&gt; 5klsjp
+[p, 5, k, s, l, j]
+[5, k, l, s, j, p]
+5
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+p
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 175:
+&gt; k5lsjp
+[p, 5, k, s, l, j]
+[k, 5, l, s, j, p]
+k
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+p
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 176:
+&gt; l5ksjp
+[p, 5, k, s, l, j]
+[l, 5, k, s, j, p]
+l
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+p
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 177:
+&gt; 5lksjp
+[p, 5, k, s, l, j]
+[5, l, k, s, j, p]
+5
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+p
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 178:
+&gt; kl5sjp
+[p, 5, k, s, l, j]
+[k, l, 5, s, j, p]
+k
+EXECUTED
+l
+EXECUTED
+5
+s
+EXECUTED
+j
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 179:
+&gt; lk5sjp
+[p, 5, k, s, l, j]
+[l, k, 5, s, j, p]
+l
+EXECUTED
+k
+EXECUTED
+5
+s
+EXECUTED
+j
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 180:
+&gt; sk5ljp
+[p, 5, k, s, l, j]
+[s, k, 5, l, j, p]
+s
+EXECUTED
+k
+EXECUTED
+5
+l
+EXECUTED
+j
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 181:
+&gt; ks5ljp
+[p, 5, k, s, l, j]
+[k, s, 5, l, j, p]
+k
+EXECUTED
+s
+EXECUTED
+5
+l
+EXECUTED
+j
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 182:
+&gt; 5skljp
+[p, 5, k, s, l, j]
+[5, s, k, l, j, p]
+5
+EXECUTED
+s
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+p
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 183:
+&gt; s5kljp
+[p, 5, k, s, l, j]
+[s, 5, k, l, j, p]
+s
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+p
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 184:
+&gt; k5sljp
+[p, 5, k, s, l, j]
+[k, 5, s, l, j, p]
+k
+EXECUTED
+5
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+p
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 185:
+&gt; 5ksljp
+[p, 5, k, s, l, j]
+[5, k, s, l, j, p]
+5
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+p
+Grade: 5 cow(s).
+Turn 186:
+&gt; 5lskjp
+[p, 5, k, s, l, j]
+[5, l, s, k, j, p]
+5
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+k
+j
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 187:
+&gt; l5skjp
+[p, 5, k, s, l, j]
+[l, 5, s, k, j, p]
+l
+EXECUTED
+5
+EXECUTED
+s
+EXECUTED
+k
+j
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 188:
+&gt; s5lkjp
+[p, 5, k, s, l, j]
+[s, 5, l, k, j, p]
+s
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+k
+j
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 189:
+&gt; 5slkjp
+[p, 5, k, s, l, j]
+[5, s, l, k, j, p]
+5
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+k
+j
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 190:
+&gt; ls5kjp
+[p, 5, k, s, l, j]
+[l, s, 5, k, j, p]
+l
+EXECUTED
+s
+EXECUTED
+5
+k
+EXECUTED
+j
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 191:
+&gt; sl5kjp
+[p, 5, k, s, l, j]
+[s, l, 5, k, j, p]
+s
+EXECUTED
+l
+EXECUTED
+5
+k
+EXECUTED
+j
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 192:
+&gt; slk5jp
+[p, 5, k, s, l, j]
+[s, l, k, 5, j, p]
+s
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+5
+j
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 193:
+&gt; lsk5jp
+[p, 5, k, s, l, j]
+[l, s, k, 5, j, p]
+l
+EXECUTED
+s
+EXECUTED
+k
+EXECUTED
+5
+j
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 194:
+&gt; ksl5jp
+[p, 5, k, s, l, j]
+[k, s, l, 5, j, p]
+k
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+5
+j
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 195:
+&gt; skl5jp
+[p, 5, k, s, l, j]
+[s, k, l, 5, j, p]
+s
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+5
+j
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 196:
+&gt; lks5jp
+[p, 5, k, s, l, j]
+[l, k, s, 5, j, p]
+l
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+5
+j
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 197:
+&gt; kls5jp
+[p, 5, k, s, l, j]
+[k, l, s, 5, j, p]
+k
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+5
+j
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 198:
+&gt; jls5kp
+[p, 5, k, s, l, j]
+[j, l, s, 5, k, p]
+j
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+5
+k
+p
+Grade: 3 cow(s).
+Turn 199:
+&gt; ljs5kp
+[p, 5, k, s, l, j]
+[l, j, s, 5, k, p]
+l
+EXECUTED
+j
+EXECUTED
+s
+EXECUTED
+5
+k
+p
+Grade: 3 cow(s).
+Turn 200:
+&gt; sjl5kp
+[p, 5, k, s, l, j]
+[s, j, l, 5, k, p]
+s
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+5
+k
+p
+Grade: 3 cow(s).
+Turn 201:
+&gt; jsl5kp
+[p, 5, k, s, l, j]
+[j, s, l, 5, k, p]
+j
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+5
+k
+p
+Grade: 3 cow(s).
+Turn 202:
+&gt; lsj5kp
+[p, 5, k, s, l, j]
+[l, s, j, 5, k, p]
+l
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+5
+k
+p
+Grade: 3 cow(s).
+Turn 203:
+&gt; slj5kp
+[p, 5, k, s, l, j]
+[s, l, j, 5, k, p]
+s
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+5
+k
+p
+Grade: 3 cow(s).
+Turn 204:
+&gt; 5ljskp
+[p, 5, k, s, l, j]
+[5, l, j, s, k, p]
+5
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+s
+EXECUTED
+k
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 205:
+&gt; l5jskp
+[p, 5, k, s, l, j]
+[l, 5, j, s, k, p]
+l
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+s
+EXECUTED
+k
+p
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 206:
+&gt; j5lskp
+[p, 5, k, s, l, j]
+[j, 5, l, s, k, p]
+j
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+k
+p
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 207:
+&gt; 5jlskp
+[p, 5, k, s, l, j]
+[5, j, l, s, k, p]
+5
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+k
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 208:
+&gt; lj5skp
+[p, 5, k, s, l, j]
+[l, j, 5, s, k, p]
+l
+EXECUTED
+j
+EXECUTED
+5
+s
+EXECUTED
+k
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 209:
+&gt; jl5skp
+[p, 5, k, s, l, j]
+[j, l, 5, s, k, p]
+j
+EXECUTED
+l
+EXECUTED
+5
+s
+EXECUTED
+k
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 210:
+&gt; js5lkp
+[p, 5, k, s, l, j]
+[j, s, 5, l, k, p]
+j
+EXECUTED
+s
+EXECUTED
+5
+l
+EXECUTED
+k
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 211:
+&gt; sj5lkp
+[p, 5, k, s, l, j]
+[s, j, 5, l, k, p]
+s
+EXECUTED
+j
+EXECUTED
+5
+l
+EXECUTED
+k
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 212:
+&gt; 5jslkp
+[p, 5, k, s, l, j]
+[5, j, s, l, k, p]
+5
+EXECUTED
+j
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+k
+p
+Grade: 4 cow(s).
+Turn 213:
+&gt; j5slkp
+[p, 5, k, s, l, j]
+[j, 5, s, l, k, p]
+j
+EXECUTED
+5
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+k
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 214:
+&gt; s5jlkp
+[p, 5, k, s, l, j]
+[s, 5, j, l, k, p]
+s
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+k
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 215:
+&gt; 5sjlkp
+[p, 5, k, s, l, j]
+[5, s, j, l, k, p]
+5
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+k
+p
+Grade: 4 cow(s).
+Turn 216:
+&gt; 5sljkp
+[p, 5, k, s, l, j]
+[5, s, l, j, k, p]
+5
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+k
+p
+Grade: 4 cow(s).
+Turn 217:
+&gt; s5ljkp
+[p, 5, k, s, l, j]
+[s, 5, l, j, k, p]
+s
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+k
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 218:
+&gt; l5sjkp
+[p, 5, k, s, l, j]
+[l, 5, s, j, k, p]
+l
+EXECUTED
+5
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+k
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 219:
+&gt; 5lsjkp
+[p, 5, k, s, l, j]
+[5, l, s, j, k, p]
+5
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+k
+p
+Grade: 4 cow(s).
+Turn 220:
+&gt; sl5jkp
+[p, 5, k, s, l, j]
+[s, l, 5, j, k, p]
+s
+EXECUTED
+l
+EXECUTED
+5
+j
+EXECUTED
+k
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 221:
+&gt; ls5jkp
+[p, 5, k, s, l, j]
+[l, s, 5, j, k, p]
+l
+EXECUTED
+s
+EXECUTED
+5
+j
+EXECUTED
+k
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 222:
+&gt; ks5jlp
+[p, 5, k, s, l, j]
+[k, s, 5, j, l, p]
+k
+EXECUTED
+s
+EXECUTED
+5
+j
+EXECUTED
+l
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 223:
+&gt; sk5jlp
+[p, 5, k, s, l, j]
+[s, k, 5, j, l, p]
+s
+EXECUTED
+k
+EXECUTED
+5
+j
+EXECUTED
+l
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 224:
+&gt; 5ksjlp
+[p, 5, k, s, l, j]
+[5, k, s, j, l, p]
+5
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+p
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 225:
+&gt; k5sjlp
+[p, 5, k, s, l, j]
+[k, 5, s, j, l, p]
+k
+EXECUTED
+5
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+p
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 226:
+&gt; s5kjlp
+[p, 5, k, s, l, j]
+[s, 5, k, j, l, p]
+s
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+p
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 227:
+&gt; 5skjlp
+[p, 5, k, s, l, j]
+[5, s, k, j, l, p]
+5
+EXECUTED
+s
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+p
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 228:
+&gt; jsk5lp
+[p, 5, k, s, l, j]
+[j, s, k, 5, l, p]
+j
+EXECUTED
+s
+EXECUTED
+k
+EXECUTED
+5
+l
+EXECUTED
+p
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 229:
+&gt; sjk5lp
+[p, 5, k, s, l, j]
+[s, j, k, 5, l, p]
+s
+EXECUTED
+j
+EXECUTED
+k
+EXECUTED
+5
+l
+EXECUTED
+p
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 230:
+&gt; kjs5lp
+[p, 5, k, s, l, j]
+[k, j, s, 5, l, p]
+k
+EXECUTED
+j
+EXECUTED
+s
+EXECUTED
+5
+l
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 231:
+&gt; jks5lp
+[p, 5, k, s, l, j]
+[j, k, s, 5, l, p]
+j
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+5
+l
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 232:
+&gt; skj5lp
+[p, 5, k, s, l, j]
+[s, k, j, 5, l, p]
+s
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+5
+l
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 233:
+&gt; ksj5lp
+[p, 5, k, s, l, j]
+[k, s, j, 5, l, p]
+k
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+5
+l
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 234:
+&gt; k5jslp
+[p, 5, k, s, l, j]
+[k, 5, j, s, l, p]
+k
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+p
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 235:
+&gt; 5kjslp
+[p, 5, k, s, l, j]
+[5, k, j, s, l, p]
+5
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+p
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 236:
+&gt; jk5slp
+[p, 5, k, s, l, j]
+[j, k, 5, s, l, p]
+j
+EXECUTED
+k
+EXECUTED
+5
+s
+EXECUTED
+l
+EXECUTED
+p
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 237:
+&gt; kj5slp
+[p, 5, k, s, l, j]
+[k, j, 5, s, l, p]
+k
+EXECUTED
+j
+EXECUTED
+5
+s
+EXECUTED
+l
+EXECUTED
+p
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 238:
+&gt; 5jkslp
+[p, 5, k, s, l, j]
+[5, j, k, s, l, p]
+5
+EXECUTED
+j
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+p
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 239:
+&gt; j5kslp
+[p, 5, k, s, l, j]
+[j, 5, k, s, l, p]
+j
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+p
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 240:
+&gt; j5sklp
+[p, 5, k, s, l, j]
+[j, 5, s, k, l, p]
+j
+EXECUTED
+5
+EXECUTED
+s
+EXECUTED
+k
+l
+EXECUTED
+p
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 241:
+&gt; 5jsklp
+[p, 5, k, s, l, j]
+[5, j, s, k, l, p]
+5
+EXECUTED
+j
+EXECUTED
+s
+EXECUTED
+k
+l
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 242:
+&gt; sj5klp
+[p, 5, k, s, l, j]
+[s, j, 5, k, l, p]
+s
+EXECUTED
+j
+EXECUTED
+5
+k
+EXECUTED
+l
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 243:
+&gt; js5klp
+[p, 5, k, s, l, j]
+[j, s, 5, k, l, p]
+j
+EXECUTED
+s
+EXECUTED
+5
+k
+EXECUTED
+l
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 244:
+&gt; 5sjklp
+[p, 5, k, s, l, j]
+[5, s, j, k, l, p]
+5
+EXECUTED
+s
+EXECUTED
+j
+EXECUTED
+k
+l
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 245:
+&gt; s5jklp
+[p, 5, k, s, l, j]
+[s, 5, j, k, l, p]
+s
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+k
+l
+EXECUTED
+p
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 246:
+&gt; l5jksp
+[p, 5, k, s, l, j]
+[l, 5, j, k, s, p]
+l
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+k
+s
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 247:
+&gt; 5ljksp
+[p, 5, k, s, l, j]
+[5, l, j, k, s, p]
+5
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+k
+s
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 248:
+&gt; jl5ksp
+[p, 5, k, s, l, j]
+[j, l, 5, k, s, p]
+j
+EXECUTED
+l
+EXECUTED
+5
+k
+EXECUTED
+s
+p
+Grade: 3 cow(s).
+Turn 249:
+&gt; lj5ksp
+[p, 5, k, s, l, j]
+[l, j, 5, k, s, p]
+l
+EXECUTED
+j
+EXECUTED
+5
+k
+EXECUTED
+s
+p
+Grade: 3 cow(s).
+Turn 250:
+&gt; 5jlksp
+[p, 5, k, s, l, j]
+[5, j, l, k, s, p]
+5
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+k
+s
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 251:
+&gt; j5lksp
+[p, 5, k, s, l, j]
+[j, 5, l, k, s, p]
+j
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+k
+s
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 252:
+&gt; k5ljsp
+[p, 5, k, s, l, j]
+[k, 5, l, j, s, p]
+k
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+s
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 253:
+&gt; 5kljsp
+[p, 5, k, s, l, j]
+[5, k, l, j, s, p]
+5
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+s
+p
+Grade: 4 cow(s).
+Turn 254:
+&gt; lk5jsp
+[p, 5, k, s, l, j]
+[l, k, 5, j, s, p]
+l
+EXECUTED
+k
+EXECUTED
+5
+j
+EXECUTED
+s
+p
+Grade: 3 cow(s).
+Turn 255:
+&gt; kl5jsp
+[p, 5, k, s, l, j]
+[k, l, 5, j, s, p]
+k
+EXECUTED
+l
+EXECUTED
+5
+j
+EXECUTED
+s
+p
+Grade: 3 cow(s).
+Turn 256:
+&gt; 5lkjsp
+[p, 5, k, s, l, j]
+[5, l, k, j, s, p]
+5
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+s
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 257:
+&gt; l5kjsp
+[p, 5, k, s, l, j]
+[l, 5, k, j, s, p]
+l
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+s
+p
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 258:
+&gt; ljk5sp
+[p, 5, k, s, l, j]
+[l, j, k, 5, s, p]
+l
+EXECUTED
+j
+EXECUTED
+k
+EXECUTED
+5
+s
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 259:
+&gt; jlk5sp
+[p, 5, k, s, l, j]
+[j, l, k, 5, s, p]
+j
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+5
+s
+EXECUTED
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 260:
+&gt; klj5sp
+[p, 5, k, s, l, j]
+[k, l, j, 5, s, p]
+k
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+5
+s
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 261:
+&gt; lkj5sp
+[p, 5, k, s, l, j]
+[l, k, j, 5, s, p]
+l
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+5
+s
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 262:
+&gt; jkl5sp
+[p, 5, k, s, l, j]
+[j, k, l, 5, s, p]
+j
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+5
+s
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 263:
+&gt; kjl5sp
+[p, 5, k, s, l, j]
+[k, j, l, 5, s, p]
+k
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+5
+s
+EXECUTED
+p
+Grade: 4 cow(s).
+Turn 264:
+&gt; kj5lsp
+[p, 5, k, s, l, j]
+[k, j, 5, l, s, p]
+k
+EXECUTED
+j
+EXECUTED
+5
+l
+EXECUTED
+s
+p
+Grade: 3 cow(s).
+Turn 265:
+&gt; jk5lsp
+[p, 5, k, s, l, j]
+[j, k, 5, l, s, p]
+j
+EXECUTED
+k
+EXECUTED
+5
+l
+EXECUTED
+s
+p
+Grade: 3 cow(s).
+Turn 266:
+&gt; 5kjlsp
+[p, 5, k, s, l, j]
+[5, k, j, l, s, p]
+5
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+s
+p
+Grade: 4 cow(s).
+Turn 267:
+&gt; k5jlsp
+[p, 5, k, s, l, j]
+[k, 5, j, l, s, p]
+k
+EXECUTED
+5
+EXECUTED
+j
+EXECUTED
+l
+EXECUTED
+s
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 268:
+&gt; j5klsp
+[p, 5, k, s, l, j]
+[j, 5, k, l, s, p]
+j
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+s
+p
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 269:
+&gt; 5jklsp
+[p, 5, k, s, l, j]
+[5, j, k, l, s, p]
+5
+EXECUTED
+j
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+s
+p
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 270:
+&gt; 5pklsj
+[p, 5, k, s, l, j]
+[5, p, k, l, s, j]
+5
+EXECUTED
+p
+k
+EXECUTED
+l
+EXECUTED
+s
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 271:
+&gt; p5klsj
+[p, 5, k, s, l, j]
+[p, 5, k, l, s, j]
+p
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+s
+j
+EXECUTED
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 272:
+&gt; k5plsj
+[p, 5, k, s, l, j]
+[k, 5, p, l, s, j]
+k
+EXECUTED
+5
+EXECUTED
+p
+l
+EXECUTED
+s
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 273:
+&gt; 5kplsj
+[p, 5, k, s, l, j]
+[5, k, p, l, s, j]
+5
+EXECUTED
+k
+EXECUTED
+p
+l
+EXECUTED
+s
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 274:
+&gt; pk5lsj
+[p, 5, k, s, l, j]
+[p, k, 5, l, s, j]
+p
+EXECUTED
+k
+EXECUTED
+5
+l
+EXECUTED
+s
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 275:
+&gt; kp5lsj
+[p, 5, k, s, l, j]
+[k, p, 5, l, s, j]
+k
+EXECUTED
+p
+5
+EXECUTED
+l
+EXECUTED
+s
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 276:
+&gt; lp5ksj
+[p, 5, k, s, l, j]
+[l, p, 5, k, s, j]
+l
+EXECUTED
+p
+5
+EXECUTED
+k
+s
+EXECUTED
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 277:
+&gt; pl5ksj
+[p, 5, k, s, l, j]
+[p, l, 5, k, s, j]
+p
+EXECUTED
+l
+EXECUTED
+5
+k
+EXECUTED
+s
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 278:
+&gt; 5lpksj
+[p, 5, k, s, l, j]
+[5, l, p, k, s, j]
+5
+EXECUTED
+l
+EXECUTED
+p
+k
+EXECUTED
+s
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 279:
+&gt; l5pksj
+[p, 5, k, s, l, j]
+[l, 5, p, k, s, j]
+l
+EXECUTED
+5
+EXECUTED
+p
+k
+EXECUTED
+s
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 280:
+&gt; p5lksj
+[p, 5, k, s, l, j]
+[p, 5, l, k, s, j]
+p
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+k
+s
+EXECUTED
+j
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 281:
+&gt; 5plksj
+[p, 5, k, s, l, j]
+[5, p, l, k, s, j]
+5
+EXECUTED
+p
+l
+EXECUTED
+k
+s
+EXECUTED
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 282:
+&gt; 5klpsj
+[p, 5, k, s, l, j]
+[5, k, l, p, s, j]
+5
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+p
+s
+EXECUTED
+j
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 283:
+&gt; k5lpsj
+[p, 5, k, s, l, j]
+[k, 5, l, p, s, j]
+k
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+p
+s
+EXECUTED
+j
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 284:
+&gt; l5kpsj
+[p, 5, k, s, l, j]
+[l, 5, k, p, s, j]
+l
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+p
+s
+EXECUTED
+j
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 285:
+&gt; 5lkpsj
+[p, 5, k, s, l, j]
+[5, l, k, p, s, j]
+5
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+p
+s
+EXECUTED
+j
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 286:
+&gt; kl5psj
+[p, 5, k, s, l, j]
+[k, l, 5, p, s, j]
+k
+EXECUTED
+l
+EXECUTED
+5
+p
+s
+EXECUTED
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 287:
+&gt; lk5psj
+[p, 5, k, s, l, j]
+[l, k, 5, p, s, j]
+l
+EXECUTED
+k
+EXECUTED
+5
+p
+s
+EXECUTED
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 288:
+&gt; lkp5sj
+[p, 5, k, s, l, j]
+[l, k, p, 5, s, j]
+l
+EXECUTED
+k
+EXECUTED
+p
+5
+s
+EXECUTED
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 289:
+&gt; klp5sj
+[p, 5, k, s, l, j]
+[k, l, p, 5, s, j]
+k
+EXECUTED
+l
+EXECUTED
+p
+5
+s
+EXECUTED
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 290:
+&gt; plk5sj
+[p, 5, k, s, l, j]
+[p, l, k, 5, s, j]
+p
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+5
+s
+EXECUTED
+j
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 291:
+&gt; lpk5sj
+[p, 5, k, s, l, j]
+[l, p, k, 5, s, j]
+l
+EXECUTED
+p
+k
+EXECUTED
+5
+EXECUTED
+s
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 292:
+&gt; kpl5sj
+[p, 5, k, s, l, j]
+[k, p, l, 5, s, j]
+k
+EXECUTED
+p
+l
+EXECUTED
+5
+EXECUTED
+s
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 293:
+&gt; pkl5sj
+[p, 5, k, s, l, j]
+[p, k, l, 5, s, j]
+p
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+5
+s
+EXECUTED
+j
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 294:
+&gt; skl5pj
+[p, 5, k, s, l, j]
+[s, k, l, 5, p, j]
+s
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+5
+p
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 295:
+&gt; ksl5pj
+[p, 5, k, s, l, j]
+[k, s, l, 5, p, j]
+k
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+5
+p
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 296:
+&gt; lsk5pj
+[p, 5, k, s, l, j]
+[l, s, k, 5, p, j]
+l
+EXECUTED
+s
+EXECUTED
+k
+EXECUTED
+5
+p
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 297:
+&gt; slk5pj
+[p, 5, k, s, l, j]
+[s, l, k, 5, p, j]
+s
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+5
+p
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 298:
+&gt; kls5pj
+[p, 5, k, s, l, j]
+[k, l, s, 5, p, j]
+k
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+5
+p
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 299:
+&gt; lks5pj
+[p, 5, k, s, l, j]
+[l, k, s, 5, p, j]
+l
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+5
+p
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 300:
+&gt; 5kslpj
+[p, 5, k, s, l, j]
+[5, k, s, l, p, j]
+5
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+p
+j
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 301:
+&gt; k5slpj
+[p, 5, k, s, l, j]
+[k, 5, s, l, p, j]
+k
+EXECUTED
+5
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+p
+j
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 302:
+&gt; s5klpj
+[p, 5, k, s, l, j]
+[s, 5, k, l, p, j]
+s
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+p
+j
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 303:
+&gt; 5sklpj
+[p, 5, k, s, l, j]
+[5, s, k, l, p, j]
+5
+EXECUTED
+s
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+p
+j
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 304:
+&gt; ks5lpj
+[p, 5, k, s, l, j]
+[k, s, 5, l, p, j]
+k
+EXECUTED
+s
+EXECUTED
+5
+l
+EXECUTED
+p
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 305:
+&gt; sk5lpj
+[p, 5, k, s, l, j]
+[s, k, 5, l, p, j]
+s
+EXECUTED
+k
+EXECUTED
+5
+l
+EXECUTED
+p
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 306:
+&gt; sl5kpj
+[p, 5, k, s, l, j]
+[s, l, 5, k, p, j]
+s
+EXECUTED
+l
+EXECUTED
+5
+k
+EXECUTED
+p
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 307:
+&gt; ls5kpj
+[p, 5, k, s, l, j]
+[l, s, 5, k, p, j]
+l
+EXECUTED
+s
+EXECUTED
+5
+k
+EXECUTED
+p
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 308:
+&gt; 5slkpj
+[p, 5, k, s, l, j]
+[5, s, l, k, p, j]
+5
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+k
+p
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 309:
+&gt; s5lkpj
+[p, 5, k, s, l, j]
+[s, 5, l, k, p, j]
+s
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+k
+p
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 310:
+&gt; l5skpj
+[p, 5, k, s, l, j]
+[l, 5, s, k, p, j]
+l
+EXECUTED
+5
+EXECUTED
+s
+EXECUTED
+k
+p
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 311:
+&gt; 5lskpj
+[p, 5, k, s, l, j]
+[5, l, s, k, p, j]
+5
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+k
+p
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 312:
+&gt; 5lkspj
+[p, 5, k, s, l, j]
+[5, l, k, s, p, j]
+5
+EXECUTED
+l
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+p
+j
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 313:
+&gt; l5kspj
+[p, 5, k, s, l, j]
+[l, 5, k, s, p, j]
+l
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+p
+j
+EXECUTED
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 314:
+&gt; k5lspj
+[p, 5, k, s, l, j]
+[k, 5, l, s, p, j]
+k
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+p
+j
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 315:
+&gt; 5klspj
+[p, 5, k, s, l, j]
+[5, k, l, s, p, j]
+5
+EXECUTED
+k
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+p
+j
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 316:
+&gt; lk5spj
+[p, 5, k, s, l, j]
+[l, k, 5, s, p, j]
+l
+EXECUTED
+k
+EXECUTED
+5
+s
+EXECUTED
+p
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 317:
+&gt; kl5spj
+[p, 5, k, s, l, j]
+[k, l, 5, s, p, j]
+k
+EXECUTED
+l
+EXECUTED
+5
+s
+EXECUTED
+p
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 318:
+&gt; pl5skj
+[p, 5, k, s, l, j]
+[p, l, 5, s, k, j]
+p
+EXECUTED
+l
+EXECUTED
+5
+s
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 319:
+&gt; lp5skj
+[p, 5, k, s, l, j]
+[l, p, 5, s, k, j]
+l
+EXECUTED
+p
+5
+EXECUTED
+s
+EXECUTED
+k
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 320:
+&gt; 5plskj
+[p, 5, k, s, l, j]
+[5, p, l, s, k, j]
+5
+EXECUTED
+p
+l
+EXECUTED
+s
+EXECUTED
+k
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 321:
+&gt; p5lskj
+[p, 5, k, s, l, j]
+[p, 5, l, s, k, j]
+p
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+k
+j
+EXECUTED
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 322:
+&gt; l5pskj
+[p, 5, k, s, l, j]
+[l, 5, p, s, k, j]
+l
+EXECUTED
+5
+EXECUTED
+p
+s
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 323:
+&gt; 5lpskj
+[p, 5, k, s, l, j]
+[5, l, p, s, k, j]
+5
+EXECUTED
+l
+EXECUTED
+p
+s
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 324:
+&gt; slp5kj
+[p, 5, k, s, l, j]
+[s, l, p, 5, k, j]
+s
+EXECUTED
+l
+EXECUTED
+p
+5
+k
+EXECUTED
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 325:
+&gt; lsp5kj
+[p, 5, k, s, l, j]
+[l, s, p, 5, k, j]
+l
+EXECUTED
+s
+EXECUTED
+p
+5
+k
+EXECUTED
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 326:
+&gt; psl5kj
+[p, 5, k, s, l, j]
+[p, s, l, 5, k, j]
+p
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+5
+k
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 327:
+&gt; spl5kj
+[p, 5, k, s, l, j]
+[s, p, l, 5, k, j]
+s
+EXECUTED
+p
+l
+EXECUTED
+5
+EXECUTED
+k
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 328:
+&gt; lps5kj
+[p, 5, k, s, l, j]
+[l, p, s, 5, k, j]
+l
+EXECUTED
+p
+s
+EXECUTED
+5
+EXECUTED
+k
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 329:
+&gt; pls5kj
+[p, 5, k, s, l, j]
+[p, l, s, 5, k, j]
+p
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+5
+k
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 330:
+&gt; p5slkj
+[p, 5, k, s, l, j]
+[p, 5, s, l, k, j]
+p
+EXECUTED
+5
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+k
+j
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 331:
+&gt; 5pslkj
+[p, 5, k, s, l, j]
+[5, p, s, l, k, j]
+5
+EXECUTED
+p
+s
+EXECUTED
+l
+EXECUTED
+k
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 332:
+&gt; sp5lkj
+[p, 5, k, s, l, j]
+[s, p, 5, l, k, j]
+s
+EXECUTED
+p
+5
+EXECUTED
+l
+EXECUTED
+k
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 333:
+&gt; ps5lkj
+[p, 5, k, s, l, j]
+[p, s, 5, l, k, j]
+p
+EXECUTED
+s
+EXECUTED
+5
+l
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 334:
+&gt; 5splkj
+[p, 5, k, s, l, j]
+[5, s, p, l, k, j]
+5
+EXECUTED
+s
+EXECUTED
+p
+l
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+Grade: 1 bull(s) + and 4 cow(s).
+Turn 335:
+&gt; s5plkj
+[p, 5, k, s, l, j]
+[s, 5, p, l, k, j]
+s
+EXECUTED
+5
+EXECUTED
+p
+l
+EXECUTED
+k
+EXECUTED
+j
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 336:
+&gt; s5lpkj
+[p, 5, k, s, l, j]
+[s, 5, l, p, k, j]
+s
+EXECUTED
+5
+EXECUTED
+l
+EXECUTED
+p
+k
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 337:
+&gt; 5slpkj
+[p, 5, k, s, l, j]
+[5, s, l, p, k, j]
+5
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+p
+k
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 338:
+&gt; ls5pkj
+[p, 5, k, s, l, j]
+[l, s, 5, p, k, j]
+l
+EXECUTED
+s
+EXECUTED
+5
+p
+k
+EXECUTED
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 339:
+&gt; sl5pkj
+[p, 5, k, s, l, j]
+[s, l, 5, p, k, j]
+s
+EXECUTED
+l
+EXECUTED
+5
+p
+k
+EXECUTED
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 340:
+&gt; 5lspkj
+[p, 5, k, s, l, j]
+[5, l, s, p, k, j]
+5
+EXECUTED
+l
+EXECUTED
+s
+EXECUTED
+p
+k
+j
+EXECUTED
+Grade: 1 bull(s) + and 3 cow(s).
+Turn 341:
+&gt; l5spkj
+[p, 5, k, s, l, j]
+[l, 5, s, p, k, j]
+l
+EXECUTED
+5
+EXECUTED
+s
+EXECUTED
+p
+k
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 342:
+&gt; k5splj
+[p, 5, k, s, l, j]
+[k, 5, s, p, l, j]
+k
+EXECUTED
+5
+EXECUTED
+s
+EXECUTED
+p
+l
+EXECUTED
+j
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 343:
+&gt; 5ksplj
+[p, 5, k, s, l, j]
+[5, k, s, p, l, j]
+5
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+p
+l
+EXECUTED
+j
+EXECUTED
+Grade: 2 bull(s) + and 3 cow(s).
+Turn 344:
+&gt; sk5plj
+[p, 5, k, s, l, j]
+[s, k, 5, p, l, j]
+s
+EXECUTED
+k
+EXECUTED
+5
+p
+l
+EXECUTED
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 345:
+&gt; ks5plj
+[p, 5, k, s, l, j]
+[k, s, 5, p, l, j]
+k
+EXECUTED
+s
+EXECUTED
+5
+p
+l
+EXECUTED
+j
+EXECUTED
+Grade: 2 bull(s) + and 2 cow(s).
+Turn 346:
+&gt; 5skplj
+[p, 5, k, s, l, j]
+[5, s, k, p, l, j]
+5
+EXECUTED
+s
+EXECUTED
+k
+EXECUTED
+p
+l
+EXECUTED
+j
+EXECUTED
+Grade: 3 bull(s) + and 2 cow(s).
+Turn 347:
+&gt; s5kplj
+[p, 5, k, s, l, j]
+[s, 5, k, p, l, j]
+s
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+p
+l
+EXECUTED
+j
+EXECUTED
+Grade: 4 bull(s) + and 1 cow(s).
+Turn 348:
+&gt; p5kslj
+[p, 5, k, s, l, j]
+[p, 5, k, s, l, j]
+p
+EXECUTED
+5
+EXECUTED
+k
+EXECUTED
+s
+EXECUTED
+l
+EXECUTED
+j
+EXECUTED
+Grade: 6 bull(s).
+Congratulations! You guessed the secret code.
 </pre>
 </span>
 </div>
@@ -241,7 +11127,7 @@ Turn 11:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at Feb 19, 2024, 4:14:19 PM</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Feb 19, 2024, 9:27:29 PM</p>
 </div>
 </div>
 </body>

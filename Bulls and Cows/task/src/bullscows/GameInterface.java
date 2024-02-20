@@ -1,6 +1,7 @@
 package bullscows;
 
 import java.sql.Array;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -12,19 +13,13 @@ public class GameInterface {
     private String[] userNum = {};
     private int turn = 1;
 
+    // GameInterface default constructor
     public GameInterface() {
 
     }
 
     // Method that manages main game interface thread
     public void start() {
-
-        // FIXME: Refactor to match example more closely.
-        // TODO: 1. If number of symbols is <= 10 then all ints
-        // TODO: 2. If number of symbols is > 10 then ints and chars
-
-
-
         int length;
         Scanner scanner = new Scanner(System.in);
 
@@ -54,17 +49,10 @@ public class GameInterface {
         }
 
         randomCodeGenerator(length, numOfSymbols);
-
-        System.out.println("Code: " + Arrays.toString(secretNum));
-
-        // FIXME: incorrect statement of available characters
         System.out.println("The secret is prepared: " + printStars(length) +
-                " (0-9, a-z)");
+                " " + printGuessRange(numOfSymbols));
         System.out.println("Okay, let's start a game!");
 
-
-
-        // TODO
         while (true) {
             System.out.println("Turn " + turn + ":");
             String guess = scanner.nextLine();
@@ -77,6 +65,8 @@ public class GameInterface {
             } else {
                 System.out.println(grader.getGrade());
                 turn++;
+                grader.setBulls(0);
+                grader.setCows(0);
             }
         }
 
@@ -87,9 +77,8 @@ public class GameInterface {
     // Method places user specified 4-digit number into an array
     private void placeUserNumInArray(String input, int length) {
         userNum = new String[length];
-
         for (int i = 0; i <= length - 1; i++) {
-            userNum[i] = String.valueOf(input.charAt(i) - '0');
+            userNum[i] = String.valueOf(input.charAt(i));
         }
     }
 
@@ -99,52 +88,66 @@ public class GameInterface {
         secretNum = new String[digits];
         Random random = new Random();
         ArrayList<String> randomSymbolsList = new ArrayList<>();
+        ArrayList<String> randomCharacterList = new ArrayList<>();
 
         // Prepare randomCharacterList with integers
-        if (digits <= 10) {
+        if (numOfChars <= 10) {
             while (randomSymbolsList.size() < digits) {
                 int randomInt = random.nextInt(10);
                 if (!randomSymbolsList.contains(String.valueOf(randomInt))) {
                     randomSymbolsList.add(String.valueOf(randomInt));
                 }
             }
+            randomCharacterList.addAll(randomSymbolsList);
         // Prepare randomCharacterList with integers and characters
         } else {
             ArrayList<String> usableCharList = new ArrayList<>();
             // add all possible chars to above list
-            for (int i = 0; i < digits - 11; i++) {
+            for (int i = 0; i < numOfChars - 10; i++) {
                 char nextChar = (char) ('a' + i);
                 usableCharList.add(String.valueOf(nextChar));
             }
-            while (randomSymbolsList.size() < digits) {
-                int randomInt = random.nextInt(10);
-                if (!randomSymbolsList.contains(String.valueOf(randomInt))) {
-                    randomSymbolsList.add(String.valueOf(randomInt));
-                }
+            for (int i = 0; i < 10; i++) {
+                randomSymbolsList.add(String.valueOf(i));
             }
             randomSymbolsList.addAll(usableCharList);
-        }
 
-        // TODO: Create secret code from ints and characters on randomCharacterList
-        ArrayList<String> randomCharacterList = new ArrayList<>();
-        while (randomCharacterList.size() <= digits) {
-            int randomElement = random.nextInt(digits);
-            if (!randomCharacterList.contains(randomSymbolsList.get(randomElement))) {
-                randomCharacterList.add(randomSymbolsList.get(randomElement));
+            // Randomly select elements to place in secret code from randomSymbolList
+            while (randomCharacterList.size() < digits) {
+                int randomElement = random.nextInt(numOfChars - 1);
+                if (!randomCharacterList.contains(randomSymbolsList.get(randomElement))) {
+                    randomCharacterList.add(randomSymbolsList.get(randomElement));
+                }
             }
         }
 
-        // TODO: Add elements in randomCharacterList to secretNum[]
+        // Add random code to secretNum[]
         for (int i = 0; i <= digits - 1; i++) {
             secretNum[i] = randomCharacterList.get(i);
         }
     }
 
+    // Method to print number of * for every digit in code
     private String printStars(int length) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i <= length - 1; i++) {
             stringBuilder.append("*");
         }
         return stringBuilder.toString();
+    }
+
+    // Method to print the guess range for the user
+    private String printGuessRange(int numOfSymbols) {
+        if (numOfSymbols < 10) {
+            return "(0-" + (numOfSymbols - 1) + ").";
+        } else if (numOfSymbols == 10) {
+            return "(0-9).";
+        } else if (numOfSymbols == 11) {
+            return "(0-9, a).";
+        } else {
+            int maxChar = numOfSymbols - 10;
+            char mChar = (char)('a' + (maxChar - 1));
+            return "(0-9, a-" + mChar + ").";
+        }
     }
 }
